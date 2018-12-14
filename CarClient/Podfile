@@ -1,0 +1,6 @@
+platform :ios, '8.0'
+install! 'cocoapods', :deterministic_uuids => false
+
+target :CarClient do
+    pod 'LZUIKit', :path => '../LZUIKit'
+end

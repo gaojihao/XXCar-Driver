@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		763B8204059497BF7EDA76EC /* libPods-CarClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DE8AFCE5860385CB511EC3 /* libPods-CarClient.a */; };
 		F674C17D21C0FE570090ECD6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F674C17C21C0FE570090ECD6 /* AppDelegate.m */; };
 		F674C18521C0FE580090ECD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F674C18421C0FE580090ECD6 /* Assets.xcassets */; };
 		F674C18B21C0FE580090ECD6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F674C18A21C0FE580090ECD6 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		060C032840602C89B4656438 /* Pods-CarClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-CarClient/Pods-CarClient.release.xcconfig"; sourceTree = "<group>"; };
+		9932624E00EAA6946E84FED3 /* Pods-CarClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CarClient/Pods-CarClient.debug.xcconfig"; sourceTree = "<group>"; };
+		D8DE8AFCE5860385CB511EC3 /* libPods-CarClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CarClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F674C17821C0FE570090ECD6 /* CarClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F674C17B21C0FE570090ECD6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F674C17C21C0FE570090ECD6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				763B8204059497BF7EDA76EC /* libPods-CarClient.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,11 +68,30 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		A21209BAE1D40B57FCA70382 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9932624E00EAA6946E84FED3 /* Pods-CarClient.debug.xcconfig */,
+				060C032840602C89B4656438 /* Pods-CarClient.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DE20B99FD9F95A21D89FC8AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8DE8AFCE5860385CB511EC3 /* libPods-CarClient.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F674C16F21C0FE570090ECD6 = {
 			isa = PBXGroup;
 			children = (
 				F674C17A21C0FE570090ECD6 /* CarClient */,
 				F674C17921C0FE570090ECD6 /* Products */,
+				A21209BAE1D40B57FCA70382 /* Pods */,
+				DE20B99FD9F95A21D89FC8AD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +123,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F674C18E21C0FE580090ECD6 /* Build configuration list for PBXNativeTarget "CarClient" */;
 			buildPhases = (
+				67B8EE69DCD8C6C1EE7D73E5 /* [CP] Check Pods Manifest.lock */,
 				F674C17421C0FE570090ECD6 /* Sources */,
 				F674C17521C0FE570090ECD6 /* Frameworks */,
 				F674C17621C0FE570090ECD6 /* Resources */,
@@ -154,6 +179,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		67B8EE69DCD8C6C1EE7D73E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CarClient-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F674C17421C0FE570090ECD6 /* Sources */ = {
@@ -282,6 +328,7 @@
 		};
 		F674C18F21C0FE580090ECD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9932624E00EAA6946E84FED3 /* Pods-CarClient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +347,7 @@
 		};
 		F674C19021C0FE580090ECD6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 060C032840602C89B4656438 /* Pods-CarClient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

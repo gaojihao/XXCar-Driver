@@ -1,0 +1,33 @@
+{
+  "name": "LZUIKit",
+  "version": "1.0.0",
+  "license": "MIT",
+  "summary": "LZUIKit",
+  "authors": {
+    "lizhi": "lizhi1026@126.com"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "LZUIKit/Classes/**/*",
+  "homepage": "https://github.com/gaojihao/XXCar-iOS",
+  "source": {
+    "http": "https://github.com/gaojihao/XXCar-iOS"
+  },
+  "public_header_files": "LZUIKit/Classes/**/*.h",
+  "frameworks": [
+    "UIKit",
+    "MapKit"
+  ],
+  "dependencies": {
+    "MBProgressHUD": [
+
+    ],
+    "DQAlertView": [
+
+    ],
+    "Masonry": [
+
+    ]
+  }
+}

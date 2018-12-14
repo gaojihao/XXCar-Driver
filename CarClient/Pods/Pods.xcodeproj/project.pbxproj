@@ -1,0 +1,926 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		000000000350 /* DQAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000100 /* DQAlertView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		000000000370 /* DQAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0000000000F0 /* DQAlertView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0000000003C0 /* DQAlertView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0000000003B0 /* DQAlertView-dummy.m */; };
+		000000000440 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000120 /* MBProgressHUD.m */; };
+		000000000460 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000110 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0000000004B0 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0000000004A0 /* MBProgressHUD-dummy.m */; };
+		000000000530 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000140 /* MASCompositeConstraint.m */; };
+		000000000540 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000170 /* MASConstraint.m */; };
+		000000000550 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000190 /* MASConstraintMaker.m */; };
+		000000000560 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 0000000001B0 /* MASLayoutConstraint.m */; };
+		000000000570 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 0000000001F0 /* MASViewAttribute.m */; };
+		000000000580 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000210 /* MASViewConstraint.m */; };
+		000000000590 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000230 /* NSArray+MASAdditions.m */; };
+		0000000005A0 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000260 /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		0000000005B0 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000280 /* View+MASAdditions.m */; };
+		0000000005C0 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0000000002B0 /* ViewController+MASAdditions.m */; };
+		0000000005E0 /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000130 /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0000000005F0 /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000150 /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		000000000600 /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000160 /* MASConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		000000000610 /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000180 /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		000000000620 /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 0000000001A0 /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		000000000630 /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = 0000000001C0 /* Masonry.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		000000000640 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 0000000001D0 /* MASUtilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		000000000650 /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 0000000001E0 /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		000000000660 /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000200 /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		000000000670 /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000220 /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		000000000680 /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000240 /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		000000000690 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000250 /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0000000006A0 /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000270 /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0000000006B0 /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000290 /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0000000006C0 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0000000002A0 /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		000000000710 /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000700 /* Masonry-dummy.m */; };
+		000000000810 /* Pods-CarClient-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000800 /* Pods-CarClient-dummy.m */; };
+		000000000840 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000000830 /* CoreGraphics.framework */; };
+		000000000860 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000000850 /* QuartzCore.framework */; };
+		000000000880 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000000870 /* Foundation.framework */; };
+		0000000008A0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000000890 /* UIKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0000000008B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 000000000000 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0000000002E0;
+			remoteInfo = DQAlertView;
+		};
+		0000000008D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 000000000000 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0000000003D0;
+			remoteInfo = MBProgressHUD;
+		};
+		0000000008F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 000000000000 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0000000004C0;
+			remoteInfo = Masonry;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0000000000E0 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		0000000000F0 /* DQAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DQAlertView.h; path = DQAlertView/DQAlertView.h; sourceTree = "<group>"; };
+		000000000100 /* DQAlertView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DQAlertView.m; path = DQAlertView/DQAlertView.m; sourceTree = "<group>"; };
+		000000000110 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		000000000120 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		000000000130 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
+		000000000140 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
+		000000000150 /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
+		000000000160 /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
+		000000000170 /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
+		000000000180 /* MASConstraintMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraintMaker.h; path = Masonry/MASConstraintMaker.h; sourceTree = "<group>"; };
+		000000000190 /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
+		0000000001A0 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
+		0000000001B0 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
+		0000000001C0 /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = Masonry/Masonry.h; sourceTree = "<group>"; };
+		0000000001D0 /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
+		0000000001E0 /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
+		0000000001F0 /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
+		000000000200 /* MASViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewConstraint.h; path = Masonry/MASViewConstraint.h; sourceTree = "<group>"; };
+		000000000210 /* MASViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewConstraint.m; path = Masonry/MASViewConstraint.m; sourceTree = "<group>"; };
+		000000000220 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		000000000230 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		000000000240 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		000000000250 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		000000000260 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		000000000270 /* View+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
+		000000000280 /* View+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = "<group>"; };
+		000000000290 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		0000000002A0 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		0000000002B0 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		0000000002D0 /* LZUIKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = LZUIKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		000000000320 /* libDQAlertView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libDQAlertView.a; path = libDQAlertView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000390 /* DQAlertView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DQAlertView.xcconfig; sourceTree = "<group>"; };
+		0000000003A0 /* DQAlertView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DQAlertView-prefix.pch"; sourceTree = "<group>"; };
+		0000000003B0 /* DQAlertView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DQAlertView-dummy.m"; sourceTree = "<group>"; };
+		000000000410 /* libMBProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMBProgressHUD.a; path = libMBProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000480 /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
+		000000000490 /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		0000000004A0 /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		000000000500 /* libMasonry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMasonry.a; path = libMasonry.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0000000006E0 /* Masonry.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.xcconfig; sourceTree = "<group>"; };
+		0000000006F0 /* Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-prefix.pch"; sourceTree = "<group>"; };
+		000000000700 /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
+		000000000760 /* libPods-CarClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-CarClient.a"; path = "libPods-CarClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0000000007A0 /* Pods-CarClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CarClient.release.xcconfig"; sourceTree = "<group>"; };
+		0000000007B0 /* Pods-CarClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CarClient.debug.xcconfig"; sourceTree = "<group>"; };
+		0000000007C0 /* Pods-CarClient-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CarClient-frameworks.sh"; sourceTree = "<group>"; };
+		0000000007D0 /* Pods-CarClient-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CarClient-resources.sh"; sourceTree = "<group>"; };
+		0000000007E0 /* Pods-CarClient-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CarClient-acknowledgements.plist"; sourceTree = "<group>"; };
+		0000000007F0 /* Pods-CarClient-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CarClient-acknowledgements.markdown"; sourceTree = "<group>"; };
+		000000000800 /* Pods-CarClient-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CarClient-dummy.m"; sourceTree = "<group>"; };
+		000000000830 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		000000000850 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		000000000870 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		000000000890 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		000000000340 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000000430 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000840 /* CoreGraphics.framework in Frameworks */,
+				000000000860 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000000520 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000880 /* Foundation.framework in Frameworks */,
+				0000000008A0 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000000780 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		000000000010 = {
+			isa = PBXGroup;
+			children = (
+				0000000000E0 /* Podfile */,
+				000000000090 /* Development Pods */,
+				000000000060 /* Frameworks */,
+				000000000080 /* Pods */,
+				000000000020 /* Products */,
+				000000000070 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		000000000020 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				000000000320 /* libDQAlertView.a */,
+				000000000500 /* libMasonry.a */,
+				000000000410 /* libMBProgressHUD.a */,
+				000000000760 /* libPods-CarClient.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		000000000060 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				000000000820 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		000000000070 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				000000000790 /* Pods-CarClient */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		000000000080 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0000000000A0 /* DQAlertView */,
+				0000000000D0 /* Masonry */,
+				0000000000C0 /* MBProgressHUD */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		000000000090 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0000000000B0 /* LZUIKit */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		0000000000A0 /* DQAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				0000000000F0 /* DQAlertView.h */,
+				000000000100 /* DQAlertView.m */,
+				000000000380 /* Support Files */,
+			);
+			name = DQAlertView;
+			path = DQAlertView;
+			sourceTree = "<group>";
+		};
+		0000000000B0 /* LZUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				0000000002C0 /* Pod */,
+			);
+			name = LZUIKit;
+			path = ../../LZUIKit;
+			sourceTree = "<group>";
+		};
+		0000000000C0 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				000000000110 /* MBProgressHUD.h */,
+				000000000120 /* MBProgressHUD.m */,
+				000000000470 /* Support Files */,
+			);
+			name = MBProgressHUD;
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		0000000000D0 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				000000000130 /* MASCompositeConstraint.h */,
+				000000000140 /* MASCompositeConstraint.m */,
+				000000000160 /* MASConstraint.h */,
+				000000000170 /* MASConstraint.m */,
+				000000000150 /* MASConstraint+Private.h */,
+				000000000180 /* MASConstraintMaker.h */,
+				000000000190 /* MASConstraintMaker.m */,
+				0000000001A0 /* MASLayoutConstraint.h */,
+				0000000001B0 /* MASLayoutConstraint.m */,
+				0000000001C0 /* Masonry.h */,
+				0000000001D0 /* MASUtilities.h */,
+				0000000001E0 /* MASViewAttribute.h */,
+				0000000001F0 /* MASViewAttribute.m */,
+				000000000200 /* MASViewConstraint.h */,
+				000000000210 /* MASViewConstraint.m */,
+				000000000220 /* NSArray+MASAdditions.h */,
+				000000000230 /* NSArray+MASAdditions.m */,
+				000000000240 /* NSArray+MASShorthandAdditions.h */,
+				000000000250 /* NSLayoutConstraint+MASDebugAdditions.h */,
+				000000000260 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				000000000270 /* View+MASAdditions.h */,
+				000000000280 /* View+MASAdditions.m */,
+				000000000290 /* View+MASShorthandAdditions.h */,
+				0000000002A0 /* ViewController+MASAdditions.h */,
+				0000000002B0 /* ViewController+MASAdditions.m */,
+				0000000006D0 /* Support Files */,
+			);
+			name = Masonry;
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		0000000002C0 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				0000000002D0 /* LZUIKit.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		000000000380 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				000000000390 /* DQAlertView.xcconfig */,
+				0000000003B0 /* DQAlertView-dummy.m */,
+				0000000003A0 /* DQAlertView-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DQAlertView";
+			sourceTree = "<group>";
+		};
+		000000000470 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				000000000480 /* MBProgressHUD.xcconfig */,
+				0000000004A0 /* MBProgressHUD-dummy.m */,
+				000000000490 /* MBProgressHUD-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MBProgressHUD";
+			sourceTree = "<group>";
+		};
+		0000000006D0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0000000006E0 /* Masonry.xcconfig */,
+				000000000700 /* Masonry-dummy.m */,
+				0000000006F0 /* Masonry-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Masonry";
+			sourceTree = "<group>";
+		};
+		000000000790 /* Pods-CarClient */ = {
+			isa = PBXGroup;
+			children = (
+				0000000007F0 /* Pods-CarClient-acknowledgements.markdown */,
+				0000000007E0 /* Pods-CarClient-acknowledgements.plist */,
+				000000000800 /* Pods-CarClient-dummy.m */,
+				0000000007C0 /* Pods-CarClient-frameworks.sh */,
+				0000000007D0 /* Pods-CarClient-resources.sh */,
+				0000000007B0 /* Pods-CarClient.debug.xcconfig */,
+				0000000007A0 /* Pods-CarClient.release.xcconfig */,
+			);
+			name = "Pods-CarClient";
+			path = "Target Support Files/Pods-CarClient";
+			sourceTree = "<group>";
+		};
+		000000000820 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				000000000830 /* CoreGraphics.framework */,
+				000000000870 /* Foundation.framework */,
+				000000000850 /* QuartzCore.framework */,
+				000000000890 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		000000000360 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000370 /* DQAlertView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000000450 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000460 /* MBProgressHUD.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0000000005D0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0000000005E0 /* MASCompositeConstraint.h in Headers */,
+				0000000005F0 /* MASConstraint+Private.h in Headers */,
+				000000000600 /* MASConstraint.h in Headers */,
+				000000000610 /* MASConstraintMaker.h in Headers */,
+				000000000620 /* MASLayoutConstraint.h in Headers */,
+				000000000630 /* Masonry.h in Headers */,
+				000000000640 /* MASUtilities.h in Headers */,
+				000000000650 /* MASViewAttribute.h in Headers */,
+				000000000660 /* MASViewConstraint.h in Headers */,
+				000000000670 /* NSArray+MASAdditions.h in Headers */,
+				000000000680 /* NSArray+MASShorthandAdditions.h in Headers */,
+				000000000690 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */,
+				0000000006A0 /* View+MASAdditions.h in Headers */,
+				0000000006B0 /* View+MASShorthandAdditions.h in Headers */,
+				0000000006C0 /* ViewController+MASAdditions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0000000002E0 /* DQAlertView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0000000002F0 /* Build configuration list for PBXNativeTarget "DQAlertView" */;
+			buildPhases = (
+				000000000330 /* Sources */,
+				000000000340 /* Frameworks */,
+				000000000360 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DQAlertView;
+			productName = DQAlertView;
+			productReference = 000000000320 /* libDQAlertView.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		0000000003D0 /* MBProgressHUD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0000000003E0 /* Build configuration list for PBXNativeTarget "MBProgressHUD" */;
+			buildPhases = (
+				000000000420 /* Sources */,
+				000000000430 /* Frameworks */,
+				000000000450 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MBProgressHUD;
+			productName = MBProgressHUD;
+			productReference = 000000000410 /* libMBProgressHUD.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		0000000004C0 /* Masonry */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0000000004D0 /* Build configuration list for PBXNativeTarget "Masonry" */;
+			buildPhases = (
+				000000000510 /* Sources */,
+				000000000520 /* Frameworks */,
+				0000000005D0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Masonry;
+			productName = Masonry;
+			productReference = 000000000500 /* libMasonry.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		000000000720 /* Pods-CarClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000000000730 /* Build configuration list for PBXNativeTarget "Pods-CarClient" */;
+			buildPhases = (
+				000000000770 /* Sources */,
+				000000000780 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0000000008C0 /* PBXTargetDependency */,
+				0000000008E0 /* PBXTargetDependency */,
+				000000000900 /* PBXTargetDependency */,
+			);
+			name = "Pods-CarClient";
+			productName = "Pods-CarClient";
+			productReference = 000000000760 /* libPods-CarClient.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		000000000000 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 000000000030 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 000000000010;
+			productRefGroup = 000000000020 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0000000002E0 /* DQAlertView */,
+				0000000004C0 /* Masonry */,
+				0000000003D0 /* MBProgressHUD */,
+				000000000720 /* Pods-CarClient */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		000000000330 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0000000003C0 /* DQAlertView-dummy.m in Sources */,
+				000000000350 /* DQAlertView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000000420 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0000000004B0 /* MBProgressHUD-dummy.m in Sources */,
+				000000000440 /* MBProgressHUD.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000000510 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000530 /* MASCompositeConstraint.m in Sources */,
+				000000000540 /* MASConstraint.m in Sources */,
+				000000000550 /* MASConstraintMaker.m in Sources */,
+				000000000560 /* MASLayoutConstraint.m in Sources */,
+				000000000710 /* Masonry-dummy.m in Sources */,
+				000000000570 /* MASViewAttribute.m in Sources */,
+				000000000580 /* MASViewConstraint.m in Sources */,
+				000000000590 /* NSArray+MASAdditions.m in Sources */,
+				0000000005A0 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				0000000005B0 /* View+MASAdditions.m in Sources */,
+				0000000005C0 /* ViewController+MASAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000000770 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000810 /* Pods-CarClient-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0000000008C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DQAlertView;
+			target = 0000000002E0 /* DQAlertView */;
+			targetProxy = 0000000008B0 /* PBXContainerItemProxy */;
+		};
+		0000000008E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MBProgressHUD;
+			target = 0000000003D0 /* MBProgressHUD */;
+			targetProxy = 0000000008D0 /* PBXContainerItemProxy */;
+		};
+		000000000900 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Masonry;
+			target = 0000000004C0 /* Masonry */;
+			targetProxy = 0000000008F0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		000000000040 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		000000000050 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		000000000300 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 000000000390 /* DQAlertView.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/DQAlertView/DQAlertView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = DQAlertView;
+				PRODUCT_NAME = DQAlertView;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		000000000310 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 000000000390 /* DQAlertView.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/DQAlertView/DQAlertView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = DQAlertView;
+				PRODUCT_NAME = DQAlertView;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0000000003F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 000000000480 /* MBProgressHUD.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = MBProgressHUD;
+				PRODUCT_NAME = MBProgressHUD;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		000000000400 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 000000000480 /* MBProgressHUD.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = MBProgressHUD;
+				PRODUCT_NAME = MBProgressHUD;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0000000004E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0000000006E0 /* Masonry.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Masonry;
+				PRODUCT_NAME = Masonry;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0000000004F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0000000006E0 /* Masonry.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Masonry;
+				PRODUCT_NAME = Masonry;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		000000000740 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0000000007A0 /* Pods-CarClient.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		000000000750 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0000000007B0 /* Pods-CarClient.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		000000000030 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000040 /* Debug */,
+				000000000050 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0000000002F0 /* Build configuration list for PBXNativeTarget "DQAlertView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000310 /* Debug */,
+				000000000300 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0000000003E0 /* Build configuration list for PBXNativeTarget "MBProgressHUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000400 /* Debug */,
+				0000000003F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0000000004D0 /* Build configuration list for PBXNativeTarget "Masonry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0000000004F0 /* Debug */,
+				0000000004E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		000000000730 /* Build configuration list for PBXNativeTarget "Pods-CarClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000750 /* Debug */,
+				000000000740 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 000000000000 /* Project object */;
+}
