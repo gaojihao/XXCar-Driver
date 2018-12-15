@@ -1,0 +1,23 @@
+{
+  "name": "LZCommon",
+  "version": "1.0.0",
+  "license": "MIT",
+  "summary": "LZCommon",
+  "authors": {
+    "lizhi": "lizhi1026@126.com"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "LZCommon/Classes/**/*",
+  "homepage": "https://github.com/gaojihao/XXCar-iOS",
+  "source": {
+    "http": "https://github.com/gaojihao/XXCar-iOS"
+  },
+  "public_header_files": "LZCommon/Classes/**/*.h",
+  "dependencies": {
+    "AFNetworking": [
+
+    ]
+  }
+}

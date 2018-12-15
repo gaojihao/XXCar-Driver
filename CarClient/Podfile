@@ -3,4 +3,5 @@ install! 'cocoapods', :deterministic_uuids => false
 
 target :CarClient do
     pod 'LZUIKit', :path => '../LZUIKit'
+    pod 'LZCommon', :path => '../LZCommon'
 end
