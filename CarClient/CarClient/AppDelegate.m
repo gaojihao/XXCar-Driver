@@ -19,11 +19,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = UIColor.whiteColor;
     [self.window makeKeyAndVisible];
     
     MainViewController *vc = [[MainViewController alloc] init];
     
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
+    navigationController.navigationBarHidden = YES;
     
     self.window.rootViewController = navigationController;
     
