@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		763B8204059497BF7EDA76EC /* libPods-CarClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DE8AFCE5860385CB511EC3 /* libPods-CarClient.a */; };
+		93279ADC21C671D200E0D1CD /* BaiduMapAuthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93279ADB21C671D200E0D1CD /* BaiduMapAuthManager.m */; };
+		93279ADF21C672C500E0D1CD /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93279ADE21C672C500E0D1CD /* MainViewController.m */; };
 		F674C17D21C0FE570090ECD6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F674C17C21C0FE570090ECD6 /* AppDelegate.m */; };
 		F674C18521C0FE580090ECD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F674C18421C0FE580090ECD6 /* Assets.xcassets */; };
 		F674C18B21C0FE580090ECD6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F674C18A21C0FE580090ECD6 /* main.m */; };
@@ -15,6 +17,10 @@
 
 /* Begin PBXFileReference section */
 		060C032840602C89B4656438 /* Pods-CarClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-CarClient/Pods-CarClient.release.xcconfig"; sourceTree = "<group>"; };
+		93279ADA21C671D200E0D1CD /* BaiduMapAuthManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaiduMapAuthManager.h; sourceTree = "<group>"; };
+		93279ADB21C671D200E0D1CD /* BaiduMapAuthManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaiduMapAuthManager.m; sourceTree = "<group>"; };
+		93279ADD21C672C500E0D1CD /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		93279ADE21C672C500E0D1CD /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		9932624E00EAA6946E84FED3 /* Pods-CarClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CarClient/Pods-CarClient.debug.xcconfig"; sourceTree = "<group>"; };
 		D8DE8AFCE5860385CB511EC3 /* libPods-CarClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CarClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F674C17821C0FE570090ECD6 /* CarClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,9 +43,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		93279AD921C6719600E0D1CD /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				93279ADA21C671D200E0D1CD /* BaiduMapAuthManager.h */,
+				93279ADB21C671D200E0D1CD /* BaiduMapAuthManager.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		93FD27A421C3EFE600B2C7C5 /* source */ = {
 			isa = PBXGroup;
 			children = (
+				93279AD921C6719600E0D1CD /* Tools */,
 				93FD27A721C3F04600B2C7C5 /* Model */,
 				93FD27A621C3F03600B2C7C5 /* View */,
 				93FD27A521C3F02500B2C7C5 /* ViewController */,
@@ -50,6 +66,8 @@
 		93FD27A521C3F02500B2C7C5 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				93279ADD21C672C500E0D1CD /* MainViewController.h */,
+				93279ADE21C672C500E0D1CD /* MainViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -227,6 +245,8 @@
 			files = (
 				F674C18B21C0FE580090ECD6 /* main.m in Sources */,
 				F674C17D21C0FE570090ECD6 /* AppDelegate.m in Sources */,
+				93279ADC21C671D200E0D1CD /* BaiduMapAuthManager.m in Sources */,
+				93279ADF21C672C500E0D1CD /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +370,7 @@
 			baseConfigurationReference = 9932624E00EAA6946E84FED3 /* Pods-CarClient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LPHS5LXJTA;
 				INFOPLIST_FILE = CarClient/Info.plist;
@@ -369,6 +390,7 @@
 			baseConfigurationReference = 060C032840602C89B4656438 /* Pods-CarClient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LPHS5LXJTA;
 				INFOPLIST_FILE = CarClient/Info.plist;
