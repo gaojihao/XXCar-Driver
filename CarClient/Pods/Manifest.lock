@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - BaiduMapKit (4.2.0)
   - DQAlertView (1.2.1)
   - LZCommon (1.0.0):
     - AFNetworking
@@ -25,12 +26,14 @@ PODS:
   - MBProgressHUD (1.1.0)
 
 DEPENDENCIES:
+  - BaiduMapKit
   - LZCommon (from `../LZCommon`)
   - LZUIKit (from `../LZUIKit`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - BaiduMapKit
     - DQAlertView
     - Masonry
     - MBProgressHUD
@@ -43,12 +46,13 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  BaiduMapKit: b6a8f31b3d2e4e5cad4084512a0d9a3878638272
   DQAlertView: 438c2799ae5437f2f9683f8a627314aa91eb5032
   LZCommon: abf2c58ec6ad4e1d70d095f8364a65c87c741402
   LZUIKit: 5627abc0db3d170f53841ae48b8c5475e18c8149
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
 
-PODFILE CHECKSUM: 2cc8963668b6db84148091e10d8bbcd3026b3cbc
+PODFILE CHECKSUM: 7ef96d959f0493466d3c00afe3009c6d4fb12ea3
 
 COCOAPODS: 1.5.3

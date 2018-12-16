@@ -2,6 +2,7 @@ platform :ios, '8.0'
 install! 'cocoapods', :deterministic_uuids => false
 
 target :CarClient do
+    pod 'BaiduMapKit'
     pod 'LZUIKit', :path => '../LZUIKit'
     pod 'LZCommon', :path => '../LZCommon'
 end
