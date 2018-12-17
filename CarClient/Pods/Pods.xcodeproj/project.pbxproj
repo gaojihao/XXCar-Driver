@@ -42,30 +42,30 @@
 		000000000940 /* UIRefreshControl+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000350 /* UIRefreshControl+AFNetworking.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		000000000950 /* UIWebView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000370 /* UIWebView+AFNetworking.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		0000000009A0 /* AFNetworking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000990 /* AFNetworking-dummy.m */; };
-		000000000A20 /* DQAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0000000003A0 /* DQAlertView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		000000000A30 /* DQAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0000000003A0 /* DQAlertView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		000000000A40 /* DQAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000390 /* DQAlertView.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		000000000A90 /* DQAlertView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000A80 /* DQAlertView-dummy.m */; };
-		000000000B10 /* LZHttpTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 0000000003C0 /* LZHttpTask.m */; };
+		000000000B20 /* LZHttpTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 0000000003C0 /* LZHttpTask.m */; };
 		000000000B30 /* LZHttpTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 0000000003B0 /* LZHttpTask.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		000000000B80 /* LZCommon-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000B70 /* LZCommon-dummy.m */; };
-		000000000C00 /* UrlSchemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0000000003F0 /* UrlSchemeManager.m */; };
-		000000000C10 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000420 /* UINavigationController+FDFullscreenPopGesture.m */; };
+		000000000C10 /* UrlSchemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0000000003F0 /* UrlSchemeManager.m */; };
+		000000000C20 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000420 /* UINavigationController+FDFullscreenPopGesture.m */; };
 		000000000C30 /* UrlSchemeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0000000003E0 /* UrlSchemeManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		000000000C40 /* UINavigationController+FDFullscreenPopGesture.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000410 /* UINavigationController+FDFullscreenPopGesture.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		000000000C90 /* LZUIKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000C80 /* LZUIKit-dummy.m */; };
-		000000000D10 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000440 /* MBProgressHUD.m */; };
+		000000000D20 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000440 /* MBProgressHUD.m */; };
 		000000000D30 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000430 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		000000000D80 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000D70 /* MBProgressHUD-dummy.m */; };
-		000000000E00 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000460 /* MASCompositeConstraint.m */; };
-		000000000E10 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000490 /* MASConstraint.m */; };
-		000000000E20 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0000000004B0 /* MASConstraintMaker.m */; };
-		000000000E30 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 0000000004D0 /* MASLayoutConstraint.m */; };
-		000000000E40 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000510 /* MASViewAttribute.m */; };
-		000000000E50 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000530 /* MASViewConstraint.m */; };
-		000000000E60 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000550 /* NSArray+MASAdditions.m */; };
-		000000000E70 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000580 /* NSLayoutConstraint+MASDebugAdditions.m */; };
-		000000000E80 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0000000005A0 /* View+MASAdditions.m */; };
-		000000000E90 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0000000005D0 /* ViewController+MASAdditions.m */; };
+		000000000E10 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000460 /* MASCompositeConstraint.m */; };
+		000000000E20 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000490 /* MASConstraint.m */; };
+		000000000E30 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0000000004B0 /* MASConstraintMaker.m */; };
+		000000000E40 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 0000000004D0 /* MASLayoutConstraint.m */; };
+		000000000E50 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000510 /* MASViewAttribute.m */; };
+		000000000E60 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000530 /* MASViewConstraint.m */; };
+		000000000E70 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000550 /* NSArray+MASAdditions.m */; };
+		000000000E80 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000580 /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		000000000E90 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0000000005A0 /* View+MASAdditions.m */; };
+		000000000EA0 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0000000005D0 /* ViewController+MASAdditions.m */; };
 		000000000EB0 /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000450 /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		000000000EC0 /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000470 /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		000000000ED0 /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000480 /* MASConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -82,84 +82,84 @@
 		000000000F80 /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0000000005B0 /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		000000000F90 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0000000005C0 /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		000000000FE0 /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000FD0 /* Masonry-dummy.m */; };
-		0000000010E0 /* Pods-CarClient-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0000000010D0 /* Pods-CarClient-dummy.m */; };
-		000000001110 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000001100 /* SystemConfiguration.framework */; };
-		000000001130 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000001120 /* Security.framework */; };
-		000000001150 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000001140 /* MobileCoreServices.framework */; };
-		000000001170 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000001160 /* CoreGraphics.framework */; };
-		000000001190 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000001180 /* UIKit.framework */; };
-		0000000011B0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0000000011A0 /* MapKit.framework */; };
-		0000000011C0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000001160 /* CoreGraphics.framework */; };
-		0000000011E0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0000000011D0 /* QuartzCore.framework */; };
-		000000001200 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0000000011F0 /* Foundation.framework */; };
-		000000001210 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000001180 /* UIKit.framework */; };
+		0000000010F0 /* Pods-CarClient-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0000000010E0 /* Pods-CarClient-dummy.m */; };
+		000000001120 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000001110 /* SystemConfiguration.framework */; };
+		000000001140 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000001130 /* Security.framework */; };
+		000000001160 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000001150 /* MobileCoreServices.framework */; };
+		000000001180 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000001170 /* CoreGraphics.framework */; };
+		0000000011A0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000001190 /* UIKit.framework */; };
+		0000000011C0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0000000011B0 /* MapKit.framework */; };
+		0000000011D0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000001170 /* CoreGraphics.framework */; };
+		0000000011F0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0000000011E0 /* QuartzCore.framework */; };
+		000000001210 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000001200 /* Foundation.framework */; };
+		000000001220 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000001190 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		000000001220 /* PBXContainerItemProxy */ = {
+		000000001230 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 000000000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 0000000006C0;
 			remoteInfo = AFNetworking;
 		};
-		000000001240 /* PBXContainerItemProxy */ = {
+		000000001250 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 000000000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 0000000009B0;
 			remoteInfo = DQAlertView;
 		};
-		000000001260 /* PBXContainerItemProxy */ = {
+		000000001270 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 000000000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 000000000AA0;
 			remoteInfo = LZCommon;
 		};
-		000000001280 /* PBXContainerItemProxy */ = {
+		000000001290 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 000000000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 0000000006C0;
 			remoteInfo = AFNetworking;
 		};
-		0000000012A0 /* PBXContainerItemProxy */ = {
+		0000000012B0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 000000000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 000000000B90;
 			remoteInfo = LZUIKit;
 		};
-		0000000012C0 /* PBXContainerItemProxy */ = {
+		0000000012D0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 000000000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 000000000CA0;
 			remoteInfo = MBProgressHUD;
 		};
-		0000000012E0 /* PBXContainerItemProxy */ = {
+		0000000012F0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 000000000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 0000000009B0;
 			remoteInfo = DQAlertView;
 		};
-		000000001300 /* PBXContainerItemProxy */ = {
+		000000001310 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 000000000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 000000000D90;
 			remoteInfo = Masonry;
 		};
-		000000001320 /* PBXContainerItemProxy */ = {
+		000000001330 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 000000000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 000000000CA0;
 			remoteInfo = MBProgressHUD;
 		};
-		000000001340 /* PBXContainerItemProxy */ = {
+		000000001350 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 000000000000 /* Project object */;
 			proxyType = 1;
@@ -274,77 +274,77 @@
 		000000000FC0 /* Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-prefix.pch"; sourceTree = "<group>"; };
 		000000000FD0 /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
 		000000001030 /* libPods-CarClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-CarClient.a"; path = "libPods-CarClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		000000001070 /* Pods-CarClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CarClient.release.xcconfig"; sourceTree = "<group>"; };
-		000000001080 /* Pods-CarClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CarClient.debug.xcconfig"; sourceTree = "<group>"; };
-		000000001090 /* Pods-CarClient-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CarClient-frameworks.sh"; sourceTree = "<group>"; };
-		0000000010A0 /* Pods-CarClient-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CarClient-resources.sh"; sourceTree = "<group>"; };
-		0000000010B0 /* Pods-CarClient-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CarClient-acknowledgements.plist"; sourceTree = "<group>"; };
-		0000000010C0 /* Pods-CarClient-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CarClient-acknowledgements.markdown"; sourceTree = "<group>"; };
-		0000000010D0 /* Pods-CarClient-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CarClient-dummy.m"; sourceTree = "<group>"; };
-		000000001100 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
-		000000001120 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
-		000000001140 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
-		000000001160 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		000000001180 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		0000000011A0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
-		0000000011D0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		0000000011F0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		000000001080 /* Pods-CarClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CarClient.release.xcconfig"; sourceTree = "<group>"; };
+		000000001090 /* Pods-CarClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CarClient.debug.xcconfig"; sourceTree = "<group>"; };
+		0000000010A0 /* Pods-CarClient-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CarClient-frameworks.sh"; sourceTree = "<group>"; };
+		0000000010B0 /* Pods-CarClient-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CarClient-resources.sh"; sourceTree = "<group>"; };
+		0000000010C0 /* Pods-CarClient-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CarClient-acknowledgements.plist"; sourceTree = "<group>"; };
+		0000000010D0 /* Pods-CarClient-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CarClient-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0000000010E0 /* Pods-CarClient-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CarClient-dummy.m"; sourceTree = "<group>"; };
+		000000001110 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		000000001130 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		000000001150 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		000000001170 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		000000001190 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		0000000011B0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
+		0000000011E0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		000000001200 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		000000000720 /* Frameworks */ = {
+		000000000730 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000000001170 /* CoreGraphics.framework in Frameworks */,
-				000000001150 /* MobileCoreServices.framework in Frameworks */,
-				000000001130 /* Security.framework in Frameworks */,
-				000000001110 /* SystemConfiguration.framework in Frameworks */,
+				000000001180 /* CoreGraphics.framework in Frameworks */,
+				000000001160 /* MobileCoreServices.framework in Frameworks */,
+				000000001140 /* Security.framework in Frameworks */,
+				000000001120 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000000A10 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		000000000B00 /* Frameworks */ = {
+		000000000A20 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000000BF0 /* Frameworks */ = {
+		000000000B10 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0000000011B0 /* MapKit.framework in Frameworks */,
-				000000001190 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000000D00 /* Frameworks */ = {
+		000000000C00 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0000000011C0 /* CoreGraphics.framework in Frameworks */,
-				0000000011E0 /* QuartzCore.framework in Frameworks */,
+				0000000011C0 /* MapKit.framework in Frameworks */,
+				0000000011A0 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000000DF0 /* Frameworks */ = {
+		000000000D10 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000000001200 /* Foundation.framework in Frameworks */,
-				000000001210 /* UIKit.framework in Frameworks */,
+				0000000011D0 /* CoreGraphics.framework in Frameworks */,
+				0000000011F0 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000001050 /* Frameworks */ = {
+		000000000E00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000001210 /* Foundation.framework in Frameworks */,
+				000000001220 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000001060 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -383,7 +383,7 @@
 		000000000060 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0000000010F0 /* iOS */,
+				000000001100 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -391,7 +391,7 @@
 		000000000070 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				000000001060 /* Pods-CarClient */,
+				000000001070 /* Pods-CarClient */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
@@ -714,32 +714,32 @@
 			path = "../Target Support Files/Masonry";
 			sourceTree = "<group>";
 		};
-		000000001060 /* Pods-CarClient */ = {
+		000000001070 /* Pods-CarClient */ = {
 			isa = PBXGroup;
 			children = (
-				0000000010C0 /* Pods-CarClient-acknowledgements.markdown */,
-				0000000010B0 /* Pods-CarClient-acknowledgements.plist */,
-				0000000010D0 /* Pods-CarClient-dummy.m */,
-				000000001090 /* Pods-CarClient-frameworks.sh */,
-				0000000010A0 /* Pods-CarClient-resources.sh */,
-				000000001080 /* Pods-CarClient.debug.xcconfig */,
-				000000001070 /* Pods-CarClient.release.xcconfig */,
+				0000000010D0 /* Pods-CarClient-acknowledgements.markdown */,
+				0000000010C0 /* Pods-CarClient-acknowledgements.plist */,
+				0000000010E0 /* Pods-CarClient-dummy.m */,
+				0000000010A0 /* Pods-CarClient-frameworks.sh */,
+				0000000010B0 /* Pods-CarClient-resources.sh */,
+				000000001090 /* Pods-CarClient.debug.xcconfig */,
+				000000001080 /* Pods-CarClient.release.xcconfig */,
 			);
 			name = "Pods-CarClient";
 			path = "Target Support Files/Pods-CarClient";
 			sourceTree = "<group>";
 		};
-		0000000010F0 /* iOS */ = {
+		000000001100 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				000000001160 /* CoreGraphics.framework */,
-				0000000011F0 /* Foundation.framework */,
-				0000000011A0 /* MapKit.framework */,
-				000000001140 /* MobileCoreServices.framework */,
-				0000000011D0 /* QuartzCore.framework */,
-				000000001120 /* Security.framework */,
-				000000001100 /* SystemConfiguration.framework */,
-				000000001180 /* UIKit.framework */,
+				000000001170 /* CoreGraphics.framework */,
+				000000001200 /* Foundation.framework */,
+				0000000011B0 /* MapKit.framework */,
+				000000001150 /* MobileCoreServices.framework */,
+				0000000011E0 /* QuartzCore.framework */,
+				000000001130 /* Security.framework */,
+				000000001110 /* SystemConfiguration.framework */,
+				000000001190 /* UIKit.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
@@ -747,7 +747,7 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		000000000730 /* Headers */ = {
+		000000000710 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -773,7 +773,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000000A30 /* Headers */ = {
+		000000000A00 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -781,7 +781,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000000B20 /* Headers */ = {
+		000000000AF0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -789,7 +789,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000000C20 /* Headers */ = {
+		000000000BE0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -798,7 +798,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000000D20 /* Headers */ = {
+		000000000CF0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -806,7 +806,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000000EA0 /* Headers */ = {
+		000000000DE0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -828,6 +828,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		000000001040 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -835,9 +842,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0000000006D0 /* Build configuration list for PBXNativeTarget "AFNetworking" */;
 			buildPhases = (
-				000000000710 /* Sources */,
-				000000000720 /* Frameworks */,
-				000000000730 /* Headers */,
+				000000000710 /* Headers */,
+				000000000720 /* Sources */,
+				000000000730 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -852,9 +859,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0000000009C0 /* Build configuration list for PBXNativeTarget "DQAlertView" */;
 			buildPhases = (
-				000000000A00 /* Sources */,
-				000000000A10 /* Frameworks */,
-				000000000A30 /* Headers */,
+				000000000A00 /* Headers */,
+				000000000A10 /* Sources */,
+				000000000A20 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -869,14 +876,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 000000000AB0 /* Build configuration list for PBXNativeTarget "LZCommon" */;
 			buildPhases = (
-				000000000AF0 /* Sources */,
-				000000000B00 /* Frameworks */,
-				000000000B20 /* Headers */,
+				000000000AF0 /* Headers */,
+				000000000B00 /* Sources */,
+				000000000B10 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				000000001290 /* PBXTargetDependency */,
+				0000000012A0 /* PBXTargetDependency */,
 			);
 			name = LZCommon;
 			productName = LZCommon;
@@ -887,16 +894,16 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 000000000BA0 /* Build configuration list for PBXNativeTarget "LZUIKit" */;
 			buildPhases = (
-				000000000BE0 /* Sources */,
-				000000000BF0 /* Frameworks */,
-				000000000C20 /* Headers */,
+				000000000BE0 /* Headers */,
+				000000000BF0 /* Sources */,
+				000000000C00 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0000000012F0 /* PBXTargetDependency */,
-				0000000012D0 /* PBXTargetDependency */,
-				000000001310 /* PBXTargetDependency */,
+				000000001300 /* PBXTargetDependency */,
+				0000000012E0 /* PBXTargetDependency */,
+				000000001320 /* PBXTargetDependency */,
 			);
 			name = LZUIKit;
 			productName = LZUIKit;
@@ -907,9 +914,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 000000000CB0 /* Build configuration list for PBXNativeTarget "MBProgressHUD" */;
 			buildPhases = (
-				000000000CF0 /* Sources */,
-				000000000D00 /* Frameworks */,
-				000000000D20 /* Headers */,
+				000000000CF0 /* Headers */,
+				000000000D00 /* Sources */,
+				000000000D10 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -924,9 +931,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 000000000DA0 /* Build configuration list for PBXNativeTarget "Masonry" */;
 			buildPhases = (
-				000000000DE0 /* Sources */,
-				000000000DF0 /* Frameworks */,
-				000000000EA0 /* Headers */,
+				000000000DE0 /* Headers */,
+				000000000DF0 /* Sources */,
+				000000000E00 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -941,18 +948,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 000000001000 /* Build configuration list for PBXNativeTarget "Pods-CarClient" */;
 			buildPhases = (
-				000000001040 /* Sources */,
-				000000001050 /* Frameworks */,
+				000000001040 /* Headers */,
+				000000001050 /* Sources */,
+				000000001060 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				000000001230 /* PBXTargetDependency */,
-				000000001250 /* PBXTargetDependency */,
-				000000001270 /* PBXTargetDependency */,
-				0000000012B0 /* PBXTargetDependency */,
-				000000001330 /* PBXTargetDependency */,
-				000000001350 /* PBXTargetDependency */,
+				000000001240 /* PBXTargetDependency */,
+				000000001260 /* PBXTargetDependency */,
+				000000001280 /* PBXTargetDependency */,
+				0000000012C0 /* PBXTargetDependency */,
+				000000001340 /* PBXTargetDependency */,
+				000000001360 /* PBXTargetDependency */,
 			);
 			name = "Pods-CarClient";
 			productName = "Pods-CarClient";
@@ -992,7 +1000,7 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		000000000710 /* Sources */ = {
+		000000000720 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1015,131 +1023,131 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000000A00 /* Sources */ = {
+		000000000A10 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				000000000A90 /* DQAlertView-dummy.m in Sources */,
-				000000000A20 /* DQAlertView.m in Sources */,
+				000000000A30 /* DQAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000000AF0 /* Sources */ = {
+		000000000B00 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				000000000B80 /* LZCommon-dummy.m in Sources */,
-				000000000B10 /* LZHttpTask.m in Sources */,
+				000000000B20 /* LZHttpTask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000000BE0 /* Sources */ = {
+		000000000BF0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				000000000C90 /* LZUIKit-dummy.m in Sources */,
-				000000000C10 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
-				000000000C00 /* UrlSchemeManager.m in Sources */,
+				000000000C20 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
+				000000000C10 /* UrlSchemeManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000000CF0 /* Sources */ = {
+		000000000D00 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				000000000D80 /* MBProgressHUD-dummy.m in Sources */,
-				000000000D10 /* MBProgressHUD.m in Sources */,
+				000000000D20 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000000DE0 /* Sources */ = {
+		000000000DF0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000000000E00 /* MASCompositeConstraint.m in Sources */,
-				000000000E10 /* MASConstraint.m in Sources */,
-				000000000E20 /* MASConstraintMaker.m in Sources */,
-				000000000E30 /* MASLayoutConstraint.m in Sources */,
+				000000000E10 /* MASCompositeConstraint.m in Sources */,
+				000000000E20 /* MASConstraint.m in Sources */,
+				000000000E30 /* MASConstraintMaker.m in Sources */,
+				000000000E40 /* MASLayoutConstraint.m in Sources */,
 				000000000FE0 /* Masonry-dummy.m in Sources */,
-				000000000E40 /* MASViewAttribute.m in Sources */,
-				000000000E50 /* MASViewConstraint.m in Sources */,
-				000000000E60 /* NSArray+MASAdditions.m in Sources */,
-				000000000E70 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
-				000000000E80 /* View+MASAdditions.m in Sources */,
-				000000000E90 /* ViewController+MASAdditions.m in Sources */,
+				000000000E50 /* MASViewAttribute.m in Sources */,
+				000000000E60 /* MASViewConstraint.m in Sources */,
+				000000000E70 /* NSArray+MASAdditions.m in Sources */,
+				000000000E80 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				000000000E90 /* View+MASAdditions.m in Sources */,
+				000000000EA0 /* ViewController+MASAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000001040 /* Sources */ = {
+		000000001050 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0000000010E0 /* Pods-CarClient-dummy.m in Sources */,
+				0000000010F0 /* Pods-CarClient-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		000000001230 /* PBXTargetDependency */ = {
+		000000001240 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AFNetworking;
 			target = 0000000006C0 /* AFNetworking */;
-			targetProxy = 000000001220 /* PBXContainerItemProxy */;
+			targetProxy = 000000001230 /* PBXContainerItemProxy */;
 		};
-		000000001250 /* PBXTargetDependency */ = {
+		000000001260 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = DQAlertView;
 			target = 0000000009B0 /* DQAlertView */;
-			targetProxy = 000000001240 /* PBXContainerItemProxy */;
+			targetProxy = 000000001250 /* PBXContainerItemProxy */;
 		};
-		000000001270 /* PBXTargetDependency */ = {
+		000000001280 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = LZCommon;
 			target = 000000000AA0 /* LZCommon */;
-			targetProxy = 000000001260 /* PBXContainerItemProxy */;
+			targetProxy = 000000001270 /* PBXContainerItemProxy */;
 		};
-		000000001290 /* PBXTargetDependency */ = {
+		0000000012A0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AFNetworking;
 			target = 0000000006C0 /* AFNetworking */;
-			targetProxy = 000000001280 /* PBXContainerItemProxy */;
+			targetProxy = 000000001290 /* PBXContainerItemProxy */;
 		};
-		0000000012B0 /* PBXTargetDependency */ = {
+		0000000012C0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = LZUIKit;
 			target = 000000000B90 /* LZUIKit */;
-			targetProxy = 0000000012A0 /* PBXContainerItemProxy */;
+			targetProxy = 0000000012B0 /* PBXContainerItemProxy */;
 		};
-		0000000012D0 /* PBXTargetDependency */ = {
+		0000000012E0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MBProgressHUD;
 			target = 000000000CA0 /* MBProgressHUD */;
-			targetProxy = 0000000012C0 /* PBXContainerItemProxy */;
+			targetProxy = 0000000012D0 /* PBXContainerItemProxy */;
 		};
-		0000000012F0 /* PBXTargetDependency */ = {
+		000000001300 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = DQAlertView;
 			target = 0000000009B0 /* DQAlertView */;
-			targetProxy = 0000000012E0 /* PBXContainerItemProxy */;
+			targetProxy = 0000000012F0 /* PBXContainerItemProxy */;
 		};
-		000000001310 /* PBXTargetDependency */ = {
+		000000001320 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Masonry;
 			target = 000000000D90 /* Masonry */;
-			targetProxy = 000000001300 /* PBXContainerItemProxy */;
+			targetProxy = 000000001310 /* PBXContainerItemProxy */;
 		};
-		000000001330 /* PBXTargetDependency */ = {
+		000000001340 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MBProgressHUD;
 			target = 000000000CA0 /* MBProgressHUD */;
-			targetProxy = 000000001320 /* PBXContainerItemProxy */;
+			targetProxy = 000000001330 /* PBXContainerItemProxy */;
 		};
-		000000001350 /* PBXTargetDependency */ = {
+		000000001360 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Masonry;
 			target = 000000000D90 /* Masonry */;
-			targetProxy = 000000001340 /* PBXContainerItemProxy */;
+			targetProxy = 000000001350 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1198,11 +1206,14 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
@@ -1259,8 +1270,12 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
@@ -1551,7 +1566,7 @@
 		};
 		000000001010 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000001070 /* Pods-CarClient.release.xcconfig */;
+			baseConfigurationReference = 000000001080 /* Pods-CarClient.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1573,7 +1588,7 @@
 		};
 		000000001020 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000001080 /* Pods-CarClient.debug.xcconfig */;
+			baseConfigurationReference = 000000001090 /* Pods-CarClient.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

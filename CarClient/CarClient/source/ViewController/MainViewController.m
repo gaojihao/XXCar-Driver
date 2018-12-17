@@ -13,13 +13,15 @@
 #import <BaiduMapKit/BaiduMapAPI_Search/BMKSearchComponent.h>
 #import <BaiduMapKit/BaiduMapAPI_Utils/BMKUtilsComponent.h>
 #import <BaiduMapKit/BaiduMapAPI_Cloud/BMKCloudSearchComponent.h>
+#import <BMKLocationkit/BMKLocationManager.h>
 #import <Masonry.h>
+#import "UINavigationController+FDFullscreenPopGesture.h"
 
 
-
-@interface MainViewController ()<BMKMapViewDelegate>
+@interface MainViewController ()<BMKMapViewDelegate,BMKLocationManagerDelegate>
 
 @property (nonatomic, strong) BMKMapView *mapView;
+@property (nonatomic, strong) BMKLocationManager *locationManager;
 
 
 @end
@@ -29,6 +31,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.fd_prefersNavigationBarHidden = YES;
+    
     [[BaiduMapAuthManager sharedInstance] start:^(BOOL result, NSString *errorMessage) {
         dispatch_async(dispatch_get_main_queue(), ^{
             
@@ -36,19 +40,13 @@
                 [self.mapView mas_makeConstraints:^(MASConstraintMaker *make) {
                     make.edges.equalTo(self.view);
                 }];
-            }else{
-                
             }
+            [self.locationManager startUpdatingLocation];
         });
     }];
     
 }
 
-- (void)startLocation
-{
-//    BMKLocationManager  *locationManager = [[BMKLocationManager alloc] init];
-    
-}
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -66,6 +64,28 @@
         _mapView.delegate = nil; // 不用时，置nil
     }
     [super viewWillDisappear:animated];
+}
+
+- (void)BMKLocationManager:(BMKLocationManager * _Nonnull)manager didFailWithError:(NSError * _Nullable)error
+{
+    
+}
+
+- (void)BMKLocationManager:(BMKLocationManager * _Nonnull)manager
+         didUpdateLocation:(BMKLocation * _Nullable)location
+                   orError:(NSError * _Nullable)error
+{
+    [self.locationManager stopUpdatingLocation];
+    [self.mapView setCenterCoordinate:location.location.coordinate];
+}
+
+- (BMKLocationManager *)locationManager
+{
+    if (_locationManager == nil) {
+        _locationManager = [[BMKLocationManager alloc] init];
+        _locationManager.delegate = self;
+    }
+    return _locationManager;
 }
 
 
