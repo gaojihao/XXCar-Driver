@@ -28,6 +28,7 @@
 @property (nonatomic, strong) UIButton *locationBtn;
 
 @property (nonatomic, copy) NSString *startAddress;
+@property (nonatomic, assign) BOOL isAlertViewPop;
 
 
 @end
@@ -36,7 +37,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.isAlertViewPop = NO;
     self.fd_prefersNavigationBarHidden = YES;
     
     [[BaiduMapAuthManager sharedInstance] start:^(BOOL result, NSString *errorMessage) {
@@ -74,7 +75,34 @@
 
 - (void)BMKLocationManager:(BMKLocationManager * _Nonnull)manager didFailWithError:(NSError * _Nullable)error
 {
+    if (self.isAlertViewPop) {
+        return;
+    }
     
+    if([CLLocationManager authorizationStatus] == kCLAuthorizationStatusDenied){
+        
+        self.isAlertViewPop = YES;
+        
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"请打开手机定位使用此功能" preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction *open = [UIAlertAction actionWithTitle:@"设置" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+            NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+            
+            if ([[UIApplication sharedApplication] canOpenURL:url]) {
+                [[UIApplication sharedApplication] openURL:url];
+            }
+        }];
+        
+        UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            
+        }];
+        
+        [alert addAction:open];
+        [alert addAction:cancel];
+        
+        [self.navigationController presentViewController:alert animated:YES completion:nil];
+    }
 }
 
 - (void)BMKLocationManager:(BMKLocationManager * _Nonnull)manager
@@ -111,7 +139,7 @@
 {
     if ([annotation isKindOfClass:[BMKPointAnnotation class]]) {
         BMKAnnotationView *newAnnotationView = [[BMKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"myAnnotation"];
-        newAnnotationView.image = [UIImage imageNamed:@"AppIcon"];
+        newAnnotationView.image = [UIImage imageNamed:@"bleBox_map_center"];
         return newAnnotationView;
     }
     return nil;
@@ -130,8 +158,8 @@
 {
     if (_locationBtn == nil) {
         _locationBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_locationBtn setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
-        [_locationBtn setImage:[UIImage imageNamed:@""] forState:UIControlStateHighlighted];
+        [_locationBtn setImage:[UIImage imageNamed:@"bleBox_map_fresh"] forState:UIControlStateNormal];
+        [_locationBtn setImage:[UIImage imageNamed:@"bleBox_map_fresh"] forState:UIControlStateHighlighted];
         [self.view addSubview:_locationBtn];
     }
     
@@ -171,7 +199,11 @@
         _mapView.showsUserLocation = YES;
         _mapView.scrollEnabled = YES;
         _mapView.mapType = BMKMapTypeStandard;
-        _mapView.zoomLevel = 18;
+        _mapView.zoomLevel = 20;
+        
+        BMKLocationViewDisplayParam *param = [[BMKLocationViewDisplayParam alloc] init];
+        param.isAccuracyCircleShow = NO;
+        [_mapView updateLocationViewWithParam:param];
         
         [self.view addSubview:_mapView];
     }
