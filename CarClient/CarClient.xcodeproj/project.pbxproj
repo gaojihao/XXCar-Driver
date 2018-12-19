@@ -15,6 +15,7 @@
 		93D0E2A421CA840F00B4784F /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D0E2A321CA840F00B4784F /* RecordViewController.m */; };
 		93D0E2A721CA848800B4784F /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D0E2A621CA848800B4784F /* Account.m */; };
 		93D0E2AA21CA849800B4784F /* AccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D0E2A921CA849800B4784F /* AccountManager.m */; };
+		93D0E2AD21CA855600B4784F /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D0E2AC21CA855600B4784F /* AboutViewController.m */; };
 		F6702AB121C7C145006950CA /* BMKLocationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6702AB021C7C145006950CA /* BMKLocationKit.framework */; };
 		F674C17D21C0FE570090ECD6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F674C17C21C0FE570090ECD6 /* AppDelegate.m */; };
 		F674C18521C0FE580090ECD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F674C18421C0FE580090ECD6 /* Assets.xcassets */; };
@@ -37,6 +38,8 @@
 		93D0E2A621CA848800B4784F /* Account.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
 		93D0E2A821CA849800B4784F /* AccountManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountManager.h; sourceTree = "<group>"; };
 		93D0E2A921CA849800B4784F /* AccountManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountManager.m; sourceTree = "<group>"; };
+		93D0E2AB21CA855600B4784F /* AboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		93D0E2AC21CA855600B4784F /* AboutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		9932624E00EAA6946E84FED3 /* Pods-CarClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CarClient/Pods-CarClient.debug.xcconfig"; sourceTree = "<group>"; };
 		D8DE8AFCE5860385CB511EC3 /* libPods-CarClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CarClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6702AB021C7C145006950CA /* BMKLocationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BMKLocationKit.framework; sourceTree = "<group>"; };
@@ -94,6 +97,8 @@
 				93D0E29D21CA83A700B4784F /* LoginViewController.m */,
 				93D0E2A221CA840F00B4784F /* RecordViewController.h */,
 				93D0E2A321CA840F00B4784F /* RecordViewController.m */,
+				93D0E2AB21CA855600B4784F /* AboutViewController.h */,
+				93D0E2AC21CA855600B4784F /* AboutViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 				F674C17D21C0FE570090ECD6 /* AppDelegate.m in Sources */,
 				93279ADC21C671D200E0D1CD /* BaiduMapAuthManager.m in Sources */,
 				93279ADF21C672C500E0D1CD /* MainViewController.m in Sources */,
+				93D0E2AD21CA855600B4784F /* AboutViewController.m in Sources */,
 				93D0E2A421CA840F00B4784F /* RecordViewController.m in Sources */,
 				93D0E29E21CA83A700B4784F /* LoginViewController.m in Sources */,
 				93D0E2AA21CA849800B4784F /* AccountManager.m in Sources */,
