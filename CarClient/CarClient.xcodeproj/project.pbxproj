@@ -10,6 +10,9 @@
 		763B8204059497BF7EDA76EC /* libPods-CarClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DE8AFCE5860385CB511EC3 /* libPods-CarClient.a */; };
 		93279ADC21C671D200E0D1CD /* BaiduMapAuthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93279ADB21C671D200E0D1CD /* BaiduMapAuthManager.m */; };
 		93279ADF21C672C500E0D1CD /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93279ADE21C672C500E0D1CD /* MainViewController.m */; };
+		93D0E29E21CA83A700B4784F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D0E29D21CA83A700B4784F /* LoginViewController.m */; };
+		93D0E2A121CA83F100B4784F /* SideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D0E2A021CA83F100B4784F /* SideView.m */; };
+		93D0E2A421CA840F00B4784F /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D0E2A321CA840F00B4784F /* RecordViewController.m */; };
 		F6702AB121C7C145006950CA /* BMKLocationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6702AB021C7C145006950CA /* BMKLocationKit.framework */; };
 		F674C17D21C0FE570090ECD6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F674C17C21C0FE570090ECD6 /* AppDelegate.m */; };
 		F674C18521C0FE580090ECD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F674C18421C0FE580090ECD6 /* Assets.xcassets */; };
@@ -22,6 +25,12 @@
 		93279ADB21C671D200E0D1CD /* BaiduMapAuthManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaiduMapAuthManager.m; sourceTree = "<group>"; };
 		93279ADD21C672C500E0D1CD /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		93279ADE21C672C500E0D1CD /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		93D0E29C21CA83A700B4784F /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		93D0E29D21CA83A700B4784F /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		93D0E29F21CA83F100B4784F /* SideView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SideView.h; sourceTree = "<group>"; };
+		93D0E2A021CA83F100B4784F /* SideView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SideView.m; sourceTree = "<group>"; };
+		93D0E2A221CA840F00B4784F /* RecordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecordViewController.h; sourceTree = "<group>"; };
+		93D0E2A321CA840F00B4784F /* RecordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecordViewController.m; sourceTree = "<group>"; };
 		9932624E00EAA6946E84FED3 /* Pods-CarClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CarClient/Pods-CarClient.debug.xcconfig"; sourceTree = "<group>"; };
 		D8DE8AFCE5860385CB511EC3 /* libPods-CarClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CarClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6702AB021C7C145006950CA /* BMKLocationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BMKLocationKit.framework; sourceTree = "<group>"; };
@@ -71,6 +80,10 @@
 			children = (
 				93279ADD21C672C500E0D1CD /* MainViewController.h */,
 				93279ADE21C672C500E0D1CD /* MainViewController.m */,
+				93D0E29C21CA83A700B4784F /* LoginViewController.h */,
+				93D0E29D21CA83A700B4784F /* LoginViewController.m */,
+				93D0E2A221CA840F00B4784F /* RecordViewController.h */,
+				93D0E2A321CA840F00B4784F /* RecordViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -78,6 +91,8 @@
 		93FD27A621C3F03600B2C7C5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				93D0E29F21CA83F100B4784F /* SideView.h */,
+				93D0E2A021CA83F100B4784F /* SideView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -248,9 +263,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F674C18B21C0FE580090ECD6 /* main.m in Sources */,
+				93D0E2A121CA83F100B4784F /* SideView.m in Sources */,
 				F674C17D21C0FE570090ECD6 /* AppDelegate.m in Sources */,
 				93279ADC21C671D200E0D1CD /* BaiduMapAuthManager.m in Sources */,
 				93279ADF21C672C500E0D1CD /* MainViewController.m in Sources */,
+				93D0E2A421CA840F00B4784F /* RecordViewController.m in Sources */,
+				93D0E29E21CA83A700B4784F /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
