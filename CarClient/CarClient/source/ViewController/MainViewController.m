@@ -17,6 +17,7 @@
 #import <Masonry.h>
 #import "UINavigationController+FDFullscreenPopGesture.h"
 #import "StartEndPointView.h"
+#import "UIColor+Extension.h"
 
 
 @interface MainViewController ()<BMKMapViewDelegate,BMKLocationManagerDelegate,BMKGeoCodeSearchDelegate>
@@ -74,6 +75,12 @@
              make.bottom.equalTo(self.view.mas_bottom).offset(-10);
         }
         make.height.offset(90);
+    }];
+    
+    [self.locationBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view.mas_left).offset(10);
+        make.bottom.equalTo(self.bottomView.mas_top).offset(-20);
+        make.size.mas_equalTo(CGSizeMake(40, 40));
     }];
 }
 
@@ -170,6 +177,10 @@
 {
     if (_locationBtn == nil) {
         _locationBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _locationBtn.backgroundColor = UIColor.whiteColor;
+        _locationBtn.layer.cornerRadius = 20;
+        _locationBtn.layer.borderWidth = 1/[UIScreen mainScreen].scale;
+        _locationBtn.layer.borderColor = UIColor.lightGrayColor.CGColor;
         [_locationBtn setImage:[UIImage imageNamed:@"bleBox_map_fresh"] forState:UIControlStateNormal];
         [_locationBtn setImage:[UIImage imageNamed:@"bleBox_map_fresh"] forState:UIControlStateHighlighted];
         [self.view addSubview:_locationBtn];

@@ -7,6 +7,7 @@
 //
 
 #import "SideView.h"
+#import "UIColor+Extension.h"
 
 @implementation SideView
 
