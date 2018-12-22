@@ -18,6 +18,7 @@
 #import "UINavigationController+FDFullscreenPopGesture.h"
 #import "StartEndPointView.h"
 #import "UIColor+Extension.h"
+#import "SideView.h"
 
 
 @interface MainViewController ()<BMKMapViewDelegate,BMKLocationManagerDelegate,BMKGeoCodeSearchDelegate>
@@ -28,6 +29,7 @@
 @property (nonatomic, strong)UIImageView *pointImage;
 @property (nonatomic, strong)BMKGeoCodeSearch *searcher;
 @property (nonatomic, strong) UIButton *locationBtn;
+@property (nonatomic, strong) UIButton *userHeadBtn;
 
 @property (nonatomic, strong)StartEndPointView *bottomView;
 
@@ -77,6 +79,16 @@
         make.height.offset(90);
     }];
     
+    [self.userHeadBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view.mas_left).offset(10);
+        if (@available(iOS 11.0, *)) {
+            make.top.equalTo(self.view.mas_safeAreaLayoutGuideTop).offset(20);
+        } else {
+            make.top.equalTo(self.view.mas_top).offset(20);
+        }
+        make.size.mas_equalTo(CGSizeMake(40, 40));
+    }];
+    
     [self.locationBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view.mas_left).offset(10);
         make.bottom.equalTo(self.bottomView.mas_top).offset(-20);
@@ -101,6 +113,18 @@
         _mapView.delegate = nil; // 不用时，置nil
     }
     [super viewWillDisappear:animated];
+}
+
+- (void)reFixLocation
+{
+    [self.locationManager startUpdatingLocation];
+}
+
+- (void)onUserHead
+{
+    SideView *sideView = [[SideView alloc] initWithFrame:self.view.frame];
+    
+    [self.view addSubview:sideView];
 }
 
 - (void)BMKLocationManager:(BMKLocationManager * _Nonnull)manager didFailWithError:(NSError * _Nullable)error
@@ -179,14 +203,28 @@
         _locationBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         _locationBtn.backgroundColor = UIColor.whiteColor;
         _locationBtn.layer.cornerRadius = 20;
+        [_locationBtn addTarget:self action:@selector(reFixLocation) forControlEvents:UIControlEventTouchUpInside];
         _locationBtn.layer.borderWidth = 1/[UIScreen mainScreen].scale;
-        _locationBtn.layer.borderColor = UIColor.lightGrayColor.CGColor;
+        _locationBtn.layer.borderColor = [UIColor lz_colorWithHex:0xE5E5E5].CGColor;
         [_locationBtn setImage:[UIImage imageNamed:@"bleBox_map_fresh"] forState:UIControlStateNormal];
         [_locationBtn setImage:[UIImage imageNamed:@"bleBox_map_fresh"] forState:UIControlStateHighlighted];
         [self.view addSubview:_locationBtn];
     }
     
     return _locationBtn;
+}
+
+- (UIButton *)userHeadBtn
+{
+    if (_userHeadBtn == nil) {
+        _userHeadBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_userHeadBtn addTarget:self action:@selector(onUserHead) forControlEvents:UIControlEventTouchUpInside];
+        [_userHeadBtn setImage:[UIImage imageNamed:@"small-head"] forState:UIControlStateNormal];
+        [_userHeadBtn setImage:[UIImage imageNamed:@"small-head"] forState:UIControlStateHighlighted];
+        [self.view addSubview:_userHeadBtn];
+    }
+    
+    return _userHeadBtn;
 }
 
 - (UIImageView *)pointImage
@@ -222,6 +260,7 @@
         _mapView.delegate = self;
         _mapView.zoomEnabled = YES;
         _mapView.zoomEnabledWithTap = YES;
+        _mapView.showMapScaleBar = YES;
         _mapView.showsUserLocation = YES;
         _mapView.scrollEnabled = YES;
         _mapView.mapType = BMKMapTypeStandard;
