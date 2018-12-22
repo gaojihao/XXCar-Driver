@@ -23,7 +23,7 @@
 @property (nonatomic, strong) BMKMapView *mapView;
 @property (nonatomic, strong) BMKLocationManager *locationManager;
 @property (nonatomic) CLLocationCoordinate2D centerCoordinate;
-@property (nonatomic, strong)BMKPointAnnotation *point;
+@property (nonatomic, strong)UIImageView *pointImage;
 @property (nonatomic, strong)BMKGeoCodeSearch *searcher;
 @property (nonatomic, strong) UIButton *locationBtn;
 
@@ -116,7 +116,7 @@
 - (void)mapView:(BMKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
 {
     self.centerCoordinate =  mapView.centerCoordinate;
-    self.point.coordinate = self.centerCoordinate;
+    self.pointImage.hidden = NO;;
     
     BMKReverseGeoCodeSearchOption *reverseGeoCodeSearchOption = [[BMKReverseGeoCodeSearchOption alloc]init];
     reverseGeoCodeSearchOption.location = mapView.centerCoordinate;
@@ -132,17 +132,6 @@
     } else {
         NSLog(@"error======%d",error);
     }
-}
-
-
-- (BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id <BMKAnnotation>)annotation
-{
-    if ([annotation isKindOfClass:[BMKPointAnnotation class]]) {
-        BMKAnnotationView *newAnnotationView = [[BMKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"myAnnotation"];
-        newAnnotationView.image = [UIImage imageNamed:@"bleBox_map_center"];
-        return newAnnotationView;
-    }
-    return nil;
 }
 
 - (BMKLocationManager *)locationManager
@@ -166,15 +155,18 @@
     return _locationBtn;
 }
 
-- (BMKPointAnnotation *)point
+- (UIImageView *)pointImage
 {
-    if (_point == nil) {
-        _point = [[BMKPointAnnotation alloc] init];
-        
-        [self.mapView addAnnotation:_point];
+    if (_pointImage == nil) {
+        _pointImage = [[UIImageView alloc] init];
+        _pointImage.image = [UIImage imageNamed:@"bleBox_map_center"];
+        _pointImage.hidden = YES;
+        _pointImage.bounds = CGRectMake(0, 0, 15, 25);
+        _pointImage.center = self.view.center;
+        [self.view addSubview:_pointImage];
     }
     
-    return _point;
+    return _pointImage;
 }
 
 - (BMKGeoCodeSearch *)searcher
