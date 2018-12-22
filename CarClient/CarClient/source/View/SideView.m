@@ -9,15 +9,53 @@
 #import "SideView.h"
 #import "UIColor+Extension.h"
 #import <Masonry.h>
+#import "SideCellModel.h"
+#import "UIColor+Extension.h"
 
 @interface SideView()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic,strong)UIControl *bg;
 @property(nonatomic,strong)UITableView *tableView;
 
+@property(nonatomic,strong)NSArray <SideCellModel*> *models;
+
 @end
 
 @implementation SideView
+
+- (NSArray *)models
+{
+    if (!_models)
+    {
+        _models = @[
+                    [[SideCellModel alloc] initWithImage:@"history" title:@"我的行程" action:@selector(onMyHistory)],
+                    [[SideCellModel alloc] initWithImage:@"service" title:@"客服电话" action:@selector(onServiceCall)],
+                    [[SideCellModel alloc] initWithImage:@"help" title:@"使用帮助" action:@selector(onHelp)],
+                    [[SideCellModel alloc] initWithImage:@"setting" title:@"设置" action:@selector(onSetting)],
+                    ];
+    }
+    return _models;
+}
+
+- (void)onMyHistory
+{
+    
+}
+
+- (void)onServiceCall
+{
+    
+}
+
+- (void)onHelp
+{
+    
+}
+
+- (void)onSetting
+{
+    
+}
 
 - (void)willMoveToSuperview:(UIView *)newSuperview
 {
@@ -50,8 +88,9 @@
     [header addSubview:imageView];
     
     UILabel *label = [[UILabel alloc] init];
-    label.text = @"14335434";
-    label.font = [UIFont systemFontOfSize:12];
+    label.text = @"136****6788";
+    label.font = [UIFont systemFontOfSize:15];
+    label.textColor = [UIColor lz_colorWithHex:0x333333];
     [header addSubview:label];
     
     [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -76,11 +115,14 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
-        cell.textLabel.font = [UIFont systemFontOfSize:13];
-        cell.textLabel.textColor = [UIColor redColor];
+        cell.textLabel.font = [UIFont systemFontOfSize:14];
+        cell.textLabel.textColor = [UIColor lz_colorWithHex:0x333333];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
-    cell.textLabel.text = @"32134123";
+    SideCellModel *model = self.models[indexPath.row];
+    cell.textLabel.text = model.title;
+    cell.imageView.image = [UIImage imageNamed:model.imageName];
     
     return cell;
 }
@@ -88,7 +130,7 @@
 - (NSInteger)tableView:(nonnull UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
-    return 4;
+    return self.models.count;
 }
 
 - (UITableView *)tableView
@@ -98,7 +140,7 @@
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        _tableView.rowHeight = 54;
+        _tableView.rowHeight = 44;
         _tableView.showsHorizontalScrollIndicator = NO;
         _tableView.showsVerticalScrollIndicator = NO;
         _tableView.tableFooterView = [UIView new];

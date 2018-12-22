@@ -11,6 +11,7 @@
 		930353A921CE6B6500DD5BDF /* StartEndPointView.m in Sources */ = {isa = PBXBuildFile; fileRef = 930353A821CE6B6500DD5BDF /* StartEndPointView.m */; };
 		930353AD21CE796D00DD5BDF /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 930353AC21CE796D00DD5BDF /* UIColor+Extension.m */; };
 		930353B021CE7B1C00DD5BDF /* WeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 930353AF21CE7B1C00DD5BDF /* WeakProxy.m */; };
+		930353B321CE887800DD5BDF /* SideCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 930353B221CE887800DD5BDF /* SideCellModel.m */; };
 		93279ADC21C671D200E0D1CD /* BaiduMapAuthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93279ADB21C671D200E0D1CD /* BaiduMapAuthManager.m */; };
 		93279ADF21C672C500E0D1CD /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93279ADE21C672C500E0D1CD /* MainViewController.m */; };
 		93D0E29E21CA83A700B4784F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D0E29D21CA83A700B4784F /* LoginViewController.m */; };
@@ -33,6 +34,8 @@
 		930353AC21CE796D00DD5BDF /* UIColor+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
 		930353AE21CE7B1C00DD5BDF /* WeakProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeakProxy.h; sourceTree = "<group>"; };
 		930353AF21CE7B1C00DD5BDF /* WeakProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeakProxy.m; sourceTree = "<group>"; };
+		930353B121CE887800DD5BDF /* SideCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SideCellModel.h; sourceTree = "<group>"; };
+		930353B221CE887800DD5BDF /* SideCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SideCellModel.m; sourceTree = "<group>"; };
 		93279ADA21C671D200E0D1CD /* BaiduMapAuthManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaiduMapAuthManager.h; sourceTree = "<group>"; };
 		93279ADB21C671D200E0D1CD /* BaiduMapAuthManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaiduMapAuthManager.m; sourceTree = "<group>"; };
 		93279ADD21C672C500E0D1CD /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -138,6 +141,8 @@
 		93FD27A721C3F04600B2C7C5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				930353B121CE887800DD5BDF /* SideCellModel.h */,
+				930353B221CE887800DD5BDF /* SideCellModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -306,6 +311,7 @@
 				93D0E2A721CA848800B4784F /* Account.m in Sources */,
 				93D0E2A121CA83F100B4784F /* SideView.m in Sources */,
 				F674C17D21C0FE570090ECD6 /* AppDelegate.m in Sources */,
+				930353B321CE887800DD5BDF /* SideCellModel.m in Sources */,
 				93279ADC21C671D200E0D1CD /* BaiduMapAuthManager.m in Sources */,
 				93279ADF21C672C500E0D1CD /* MainViewController.m in Sources */,
 				930353AD21CE796D00DD5BDF /* UIColor+Extension.m in Sources */,
