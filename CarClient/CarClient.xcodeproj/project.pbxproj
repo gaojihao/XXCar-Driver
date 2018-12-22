@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		763B8204059497BF7EDA76EC /* libPods-CarClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DE8AFCE5860385CB511EC3 /* libPods-CarClient.a */; };
+		930353A921CE6B6500DD5BDF /* StartEndPointView.m in Sources */ = {isa = PBXBuildFile; fileRef = 930353A821CE6B6500DD5BDF /* StartEndPointView.m */; };
 		93279ADC21C671D200E0D1CD /* BaiduMapAuthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93279ADB21C671D200E0D1CD /* BaiduMapAuthManager.m */; };
 		93279ADF21C672C500E0D1CD /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93279ADE21C672C500E0D1CD /* MainViewController.m */; };
 		93D0E29E21CA83A700B4784F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D0E29D21CA83A700B4784F /* LoginViewController.m */; };
@@ -24,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		060C032840602C89B4656438 /* Pods-CarClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-CarClient/Pods-CarClient.release.xcconfig"; sourceTree = "<group>"; };
+		930353A721CE6B6500DD5BDF /* StartEndPointView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartEndPointView.h; sourceTree = "<group>"; };
+		930353A821CE6B6500DD5BDF /* StartEndPointView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartEndPointView.m; sourceTree = "<group>"; };
 		93279ADA21C671D200E0D1CD /* BaiduMapAuthManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaiduMapAuthManager.h; sourceTree = "<group>"; };
 		93279ADB21C671D200E0D1CD /* BaiduMapAuthManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaiduMapAuthManager.m; sourceTree = "<group>"; };
 		93279ADD21C672C500E0D1CD /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -108,6 +111,8 @@
 			children = (
 				93D0E29F21CA83F100B4784F /* SideView.h */,
 				93D0E2A021CA83F100B4784F /* SideView.m */,
+				930353A721CE6B6500DD5BDF /* StartEndPointView.h */,
+				930353A821CE6B6500DD5BDF /* StartEndPointView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F674C18B21C0FE580090ECD6 /* main.m in Sources */,
+				930353A921CE6B6500DD5BDF /* StartEndPointView.m in Sources */,
 				93D0E2A721CA848800B4784F /* Account.m in Sources */,
 				93D0E2A121CA83F100B4784F /* SideView.m in Sources */,
 				F674C17D21C0FE570090ECD6 /* AppDelegate.m in Sources */,

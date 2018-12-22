@@ -16,6 +16,7 @@
 #import <BMKLocationkit/BMKLocationManager.h>
 #import <Masonry.h>
 #import "UINavigationController+FDFullscreenPopGesture.h"
+#import "StartEndPointView.h"
 
 
 @interface MainViewController ()<BMKMapViewDelegate,BMKLocationManagerDelegate,BMKGeoCodeSearchDelegate>
@@ -26,6 +27,8 @@
 @property (nonatomic, strong)UIImageView *pointImage;
 @property (nonatomic, strong)BMKGeoCodeSearch *searcher;
 @property (nonatomic, strong) UIButton *locationBtn;
+
+@property (nonatomic, strong)StartEndPointView *bottomView;
 
 @property (nonatomic, copy) NSString *startAddress;
 @property (nonatomic, assign) BOOL isAlertViewPop;
@@ -45,13 +48,33 @@
             
             if (result) {
                 [self.mapView mas_makeConstraints:^(MASConstraintMaker *make) {
-                    make.edges.equalTo(self.view);
+                    make.left.right.top.equalTo(self.view);
+                    if (@available(iOS 11.0, *)) {
+                        make.bottom.equalTo(self.view.mas_safeAreaLayoutGuideBottom);
+                    } else {
+                        make.bottom.equalTo(self.view.mas_bottom);
+                    }
                 }];
+                [self setupUI];
             }
             [self.locationManager startUpdatingLocation];
         });
     }];
     
+}
+
+- (void)setupUI
+{
+    [self.bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view.mas_left).offset(10);
+        make.right.equalTo(self.view.mas_right).offset(-10);
+        if (@available(iOS 11.0, *)) {
+            make.bottom.equalTo(self.view.mas_safeAreaLayoutGuideBottom).offset(-10);
+        } else {
+             make.bottom.equalTo(self.view.mas_bottom).offset(-10);
+        }
+        make.height.offset(90);
+    }];
 }
 
 
@@ -200,6 +223,16 @@
         [self.view addSubview:_mapView];
     }
     return _mapView;
+}
+
+- (StartEndPointView *)bottomView
+{
+    if (!_bottomView)
+    {
+        _bottomView = [[StartEndPointView alloc] init];
+        [self.view addSubview:_bottomView];
+    }
+    return _bottomView;
 }
 
 
