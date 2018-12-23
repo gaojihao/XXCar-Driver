@@ -11,6 +11,8 @@
 
 @interface AppDelegate ()
 
+@property(nonatomic,strong)UINavigationController *navigationController;
+
 @end
 
 @implementation AppDelegate
@@ -24,12 +26,16 @@
     
     MainViewController *vc = [[MainViewController alloc] init];
     
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
-    navigationController.navigationBarHidden = YES;
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
     
-    self.window.rootViewController = navigationController;
+    self.window.rootViewController = self.navigationController;
     
     return YES;
+}
+
+- (UINavigationController*)navigation
+{
+    return self.navigationController;
 }
 
 

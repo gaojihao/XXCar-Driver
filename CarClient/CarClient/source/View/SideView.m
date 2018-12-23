@@ -7,10 +7,14 @@
 //
 
 #import "SideView.h"
+#import <objc/message.h>
 #import "UIColor+Extension.h"
 #import <Masonry.h>
 #import "SideCellModel.h"
 #import "UIColor+Extension.h"
+#import "UrlSchemeManager.h"
+#import "AppDelegate.h"
+
 
 @interface SideView()<UITableViewDelegate,UITableViewDataSource>
 
@@ -39,7 +43,11 @@
 
 - (void)onMyHistory
 {
+    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     
+    [[UrlSchemeManager sharedInstance] pushViewControllerWithControllerName:@"RecordViewController"
+                                                                  navigator:[delegate navigation]
+                                                                     params:nil];
 }
 
 - (void)onServiceCall
@@ -131,6 +139,14 @@
  numberOfRowsInSection:(NSInteger)section
 {
     return self.models.count;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    SideCellModel *model = self.models[indexPath.row];
+    if ([self respondsToSelector:model.action]) {
+        ((void(*)(id, SEL))objc_msgSend)(self, model.action);
+    }
 }
 
 - (UITableView *)tableView
