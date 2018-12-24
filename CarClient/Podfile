@@ -3,6 +3,7 @@ install! 'cocoapods', :deterministic_uuids => false
 
 target :CarClient do
     pod 'BaiduMapKit'
+    pod 'ReactiveCocoa', '< 3.0'
     pod 'LZUIKit', :path => '../LZUIKit'
     pod 'LZCommon', :path => '../LZCommon'
 end
