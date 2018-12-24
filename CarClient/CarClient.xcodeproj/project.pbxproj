@@ -21,6 +21,7 @@
 		93D0E2AA21CA849800B4784F /* AccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D0E2A921CA849800B4784F /* AccountManager.m */; };
 		93D0E2AD21CA855600B4784F /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D0E2AC21CA855600B4784F /* AboutViewController.m */; };
 		93EF819321D1234B00E18C3A /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EF819221D1234B00E18C3A /* GuideViewController.m */; };
+		93EF819621D123CE00E18C3A /* GeoCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EF819521D123CE00E18C3A /* GeoCodeViewController.m */; };
 		F6702AB121C7C145006950CA /* BMKLocationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6702AB021C7C145006950CA /* BMKLocationKit.framework */; };
 		F674C17D21C0FE570090ECD6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F674C17C21C0FE570090ECD6 /* AppDelegate.m */; };
 		F674C18521C0FE580090ECD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F674C18421C0FE580090ECD6 /* Assets.xcassets */; };
@@ -55,6 +56,8 @@
 		93D0E2AC21CA855600B4784F /* AboutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		93EF819121D1234B00E18C3A /* GuideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
 		93EF819221D1234B00E18C3A /* GuideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuideViewController.m; sourceTree = "<group>"; };
+		93EF819421D123CE00E18C3A /* GeoCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeoCodeViewController.h; sourceTree = "<group>"; };
+		93EF819521D123CE00E18C3A /* GeoCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeoCodeViewController.m; sourceTree = "<group>"; };
 		9932624E00EAA6946E84FED3 /* Pods-CarClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CarClient/Pods-CarClient.debug.xcconfig"; sourceTree = "<group>"; };
 		D8DE8AFCE5860385CB511EC3 /* libPods-CarClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CarClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6702AB021C7C145006950CA /* BMKLocationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BMKLocationKit.framework; sourceTree = "<group>"; };
@@ -128,6 +131,8 @@
 				93D0E2AC21CA855600B4784F /* AboutViewController.m */,
 				93EF819121D1234B00E18C3A /* GuideViewController.h */,
 				93EF819221D1234B00E18C3A /* GuideViewController.m */,
+				93EF819421D123CE00E18C3A /* GeoCodeViewController.h */,
+				93EF819521D123CE00E18C3A /* GeoCodeViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -317,6 +322,7 @@
 				93D0E2A721CA848800B4784F /* Account.m in Sources */,
 				93D0E2A121CA83F100B4784F /* SideView.m in Sources */,
 				F674C17D21C0FE570090ECD6 /* AppDelegate.m in Sources */,
+				93EF819621D123CE00E18C3A /* GeoCodeViewController.m in Sources */,
 				930353B321CE887800DD5BDF /* SideCellModel.m in Sources */,
 				93279ADC21C671D200E0D1CD /* BaiduMapAuthManager.m in Sources */,
 				93279ADF21C672C500E0D1CD /* MainViewController.m in Sources */,
