@@ -186,8 +186,8 @@
                         errorCode:(BMKSearchErrorCode)error
 {
     if (error == BMK_SEARCH_NO_ERROR) {
-        self.startAddress = result.sematicDescription;
-        self.bottomView.startLocation.address = result.sematicDescription;
+        self.startAddress = result.address;
+        self.bottomView.startLocation.address = result.address;
     } else {
         NSLog(@"error======%d",error);
     }
