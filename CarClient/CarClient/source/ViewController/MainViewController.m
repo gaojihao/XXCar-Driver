@@ -15,10 +15,12 @@
 #import <BaiduMapKit/BaiduMapAPI_Cloud/BMKCloudSearchComponent.h>
 #import <BMKLocationkit/BMKLocationManager.h>
 #import <Masonry.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
 #import "UINavigationController+FDFullscreenPopGesture.h"
 #import "StartEndPointView.h"
 #import "UIColor+Extension.h"
 #import "SideView.h"
+#import "LocationPointModel.h"
 
 
 @interface MainViewController ()<BMKMapViewDelegate,BMKLocationManagerDelegate,BMKGeoCodeSearchDelegate>
@@ -170,7 +172,9 @@
 - (void)mapView:(BMKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
 {
     self.centerCoordinate =  mapView.centerCoordinate;
-    self.pointImage.hidden = NO;;
+    self.pointImage.hidden = NO;
+    
+    self.bottomView.startLocation.coordinate2D = self.centerCoordinate;
     
     BMKReverseGeoCodeSearchOption *reverseGeoCodeSearchOption = [[BMKReverseGeoCodeSearchOption alloc]init];
     reverseGeoCodeSearchOption.location = mapView.centerCoordinate;
@@ -183,6 +187,7 @@
 {
     if (error == BMK_SEARCH_NO_ERROR) {
         self.startAddress = result.sematicDescription;
+        self.bottomView.startLocation.address = result.sematicDescription;
     } else {
         NSLog(@"error======%d",error);
     }

@@ -9,6 +9,8 @@
 #import "StartEndPointView.h"
 #import <Masonry.h>
 #import "UIColor+Extension.h"
+#import "LocationPointModel.h"
+#import <ReactiveCocoa.h>
 
 const CGFloat LZ_TextFieldHeight = 44.0f;
 
@@ -25,9 +27,17 @@ const CGFloat LZ_TextFieldHeight = 44.0f;
 {
     self = [super init];
     if (self) {
-        
+        self.startLocation = [[LocationPointModel alloc] init];
+        self.endLocation = [[LocationPointModel alloc] init];
+        [self bindSignal];
     }
     return self;
+}
+
+- (void)bindSignal
+{
+    RAC(self.startField, text) = RACObserve(self.startLocation, address);
+    RAC(self.endField, text) = RACObserve(self.endLocation, address);
 }
 
 - (void)willMoveToSuperview:(UIView *)newSuperview

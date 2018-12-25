@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+@class LocationPointModel;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface StartEndPointView : UIView
+
+@property (nonatomic, strong)LocationPointModel *startLocation;
+@property (nonatomic, strong)LocationPointModel *endLocation;
 
 @end
 
