@@ -14,6 +14,7 @@
 		930353B321CE887800DD5BDF /* SideCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 930353B221CE887800DD5BDF /* SideCellModel.m */; };
 		93279ADC21C671D200E0D1CD /* BaiduMapAuthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93279ADB21C671D200E0D1CD /* BaiduMapAuthManager.m */; };
 		93279ADF21C672C500E0D1CD /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93279ADE21C672C500E0D1CD /* MainViewController.m */; };
+		935F8FAB21D26BD30053B3AF /* LocationPointModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F8FAA21D26BD30053B3AF /* LocationPointModel.m */; };
 		93D0E29E21CA83A700B4784F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D0E29D21CA83A700B4784F /* LoginViewController.m */; };
 		93D0E2A121CA83F100B4784F /* SideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D0E2A021CA83F100B4784F /* SideView.m */; };
 		93D0E2A421CA840F00B4784F /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D0E2A321CA840F00B4784F /* RecordViewController.m */; };
@@ -42,6 +43,8 @@
 		93279ADB21C671D200E0D1CD /* BaiduMapAuthManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaiduMapAuthManager.m; sourceTree = "<group>"; };
 		93279ADD21C672C500E0D1CD /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		93279ADE21C672C500E0D1CD /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		935F8FA921D26BD30053B3AF /* LocationPointModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationPointModel.h; sourceTree = "<group>"; };
+		935F8FAA21D26BD30053B3AF /* LocationPointModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationPointModel.m; sourceTree = "<group>"; };
 		93D0E29C21CA83A700B4784F /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		93D0E29D21CA83A700B4784F /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		93D0E29F21CA83F100B4784F /* SideView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SideView.h; sourceTree = "<group>"; };
@@ -153,6 +156,8 @@
 			children = (
 				930353B121CE887800DD5BDF /* SideCellModel.h */,
 				930353B221CE887800DD5BDF /* SideCellModel.m */,
+				935F8FA921D26BD30053B3AF /* LocationPointModel.h */,
+				935F8FAA21D26BD30053B3AF /* LocationPointModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -321,6 +326,7 @@
 				930353A921CE6B6500DD5BDF /* StartEndPointView.m in Sources */,
 				93D0E2A721CA848800B4784F /* Account.m in Sources */,
 				93D0E2A121CA83F100B4784F /* SideView.m in Sources */,
+				935F8FAB21D26BD30053B3AF /* LocationPointModel.m in Sources */,
 				F674C17D21C0FE570090ECD6 /* AppDelegate.m in Sources */,
 				93EF819621D123CE00E18C3A /* GeoCodeViewController.m in Sources */,
 				930353B321CE887800DD5BDF /* SideCellModel.m in Sources */,
