@@ -11,6 +11,9 @@
 #import "UIColor+Extension.h"
 #import "LocationPointModel.h"
 #import <ReactiveCocoa.h>
+#import "UrlSchemeManager.h"
+#import "AppDelegate.h"
+
 
 const CGFloat LZ_TextFieldHeight = 44.0f;
 
@@ -75,6 +78,39 @@ const CGFloat LZ_TextFieldHeight = 44.0f;
         make.top.equalTo(line.mas_bottom);
         make.height.mas_equalTo(LZ_TextFieldHeight);
     }];
+}
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    void(^completionBlock)(LocationPointModel *) = nil;
+    
+    if (textField == self.startField) {
+        
+        completionBlock = ^(LocationPointModel *point){
+        };
+        [dic setObject:self.startLocation forKey:@"location"];
+        
+    } else if (textField == self.endField){
+        
+        completionBlock = ^(LocationPointModel *point){
+            
+        };
+        [dic setObject:completionBlock forKey:@"completionBlock"];
+        [dic setObject:self.endLocation forKey:@"location"];
+    }
+    
+    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    
+    
+    [dic setObject:completionBlock forKey:@"completionBlock"];
+    
+    
+    [[UrlSchemeManager sharedInstance] pushViewControllerWithControllerName:@"GeoCodeViewController"
+                                                                  navigator:[delegate navigation]
+                                                                     params:dic];
+    
+    return NO;
 }
 
 - (UITextField *)startField
