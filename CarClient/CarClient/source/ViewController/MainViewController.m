@@ -43,7 +43,8 @@
 
 @implementation MainViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     self.isAlertViewPop = NO;
     self.fd_prefersNavigationBarHidden = YES;
