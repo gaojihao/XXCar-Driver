@@ -18,8 +18,9 @@
 #import <Masonry/Masonry.h>
 #import "UIColor+Extension.h"
 #import "BaiduMapAuthManager.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
-@interface GeoCodeViewController ()<UITextFieldDelegate,UITableViewDelegate,UITableViewDataSource,BMKLocationManagerDelegate,BMKGeoCodeSearchDelegate,BMKGeoCodeSearchDelegate>
+@interface GeoCodeViewController ()<UITextFieldDelegate,UITableViewDelegate,UITableViewDataSource,BMKLocationManagerDelegate,BMKPoiSearchDelegate>
 
 @property (nonatomic, copy) void(^completionBlock)(LocationPointModel *point);
 
@@ -30,10 +31,9 @@
 @property (nonatomic, strong) UITableView *tableView;
 
 @property (nonatomic, strong) BMKLocationManager *locationManager;
-@property (nonatomic, strong) NSMutableArray* geoInfoList;
-@property (nonatomic, strong) NSMutableArray* poiInfoList;
+@property (nonatomic, strong) NSMutableArray <BMKPoiInfo *>* poiInfoList;
 @property (nonatomic, strong) CLLocation *userLocation;
-@property (nonatomic, strong) BMKGeoCodeSearch *geoCodeSearch;
+@property (nonatomic, strong) BMKPoiSearch *poisearch;
 
 @end
 
@@ -53,8 +53,8 @@
 {
     [super viewWillAppear:animated];
     
-    if (_geoCodeSearch) {
-        _geoCodeSearch.delegate = self;
+    if (_poisearch) {
+        _poisearch.delegate = self;
     }
     
 }
@@ -63,8 +63,8 @@
 {
     [super viewWillDisappear:animated];
     
-    if (_geoCodeSearch) {
-        _geoCodeSearch.delegate = nil;
+    if (_poisearch) {
+        _poisearch.delegate = nil;
     }
 }
 
@@ -116,11 +116,14 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             if (result) {
                 
-                BMKGeoCodeSearchOption *option = [[BMKGeoCodeSearchOption alloc] init];
+                BMKPOICitySearchOption *option = [[BMKPOICitySearchOption alloc] init];
                 
-                option.address = self.textField.text;
+                option.keyword = @"湾谷";//self.textField.text;
+                option.city = @"上海市";
+                option.pageIndex = 0;
+                option.pageSize = 20;
                 
-                [self.geoCodeSearch geoCode:option];
+                [self.poisearch poiSearchInCity:option];
             }
         });
     }];
@@ -152,16 +155,28 @@
     self.userLocation = location.location;
 }
 
-- (void)onGetGeoCodeResult:(BMKGeoCodeSearch *)searcher
-                    result:(BMKGeoCodeSearchResult *)result
-                 errorCode:(BMKSearchErrorCode)error
+- (void)onGetPoiResult:(BMKPoiSearch*)searcher
+                result:(BMKPOISearchResult*)poiResult
+             errorCode:(BMKSearchErrorCode)errorCode
 {
+    [self.poiInfoList removeAllObjects];
+    
+    if (errorCode == BMK_SEARCH_NO_ERROR){
+        NSArray *filterArray =[[[poiResult.poiInfoList rac_sequence] filter:^BOOL(BMKPoiInfo *poiInfo) {
+            return poiInfo.name.length >= 2;
+        }] array];
+        [self.poiInfoList addObjectsFromArray:filterArray];
+        [self.tableView reloadData];
+    }else{
+        NSLog(@"抱歉，未找到结果");
+    }
     
 }
 
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return self.poiInfoList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -241,13 +256,22 @@
     return _locationManager;
 }
 
-- (BMKGeoCodeSearch *)geoCodeSearch
+- (BMKPoiSearch *)poisearch
 {
-    if (!_geoCodeSearch) {
-        _geoCodeSearch = [BMKGeoCodeSearch new];
-        _geoCodeSearch.delegate = self;
+    if (!_poisearch) {
+        _poisearch = [BMKPoiSearch new];
+        _poisearch.delegate = self;
     }
-    return _geoCodeSearch;
+    return _poisearch;
+}
+
+- (NSMutableArray *)poiInfoList
+{
+    if (!_poiInfoList)
+    {
+        _poiInfoList = [NSMutableArray array];
+    }
+    return _poiInfoList;
 }
 
 
