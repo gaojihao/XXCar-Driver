@@ -8,11 +8,18 @@
 
 #import "GeoCodeViewController.h"
 #import "UINavigationController+FDFullscreenPopGesture.h"
+#import <BaiduMapKit/BaiduMapAPI_Base/BMKBaseComponent.h>
+#import <BaiduMapKit/BaiduMapAPI_Map/BMKMapComponent.h>
+#import <BaiduMapKit/BaiduMapAPI_Search/BMKPoiSearch.h>
+#import <BaiduMapKit/BaiduMapAPI_Utils/BMKUtilsComponent.h>
+#import <BaiduMapKit/BaiduMapAPI_Search/BMKGeocodeSearch.h>
+#import <BMKLocationkit/BMKLocationManager.h>
 #import "LocationPointModel.h"
 #import <Masonry/Masonry.h>
 #import "UIColor+Extension.h"
+#import "BaiduMapAuthManager.h"
 
-@interface GeoCodeViewController ()<UITextFieldDelegate,UITableViewDelegate,UITableViewDataSource>
+@interface GeoCodeViewController ()<UITextFieldDelegate,UITableViewDelegate,UITableViewDataSource,BMKLocationManagerDelegate,BMKGeoCodeSearchDelegate,BMKGeoCodeSearchDelegate>
 
 @property (nonatomic, copy) void(^completionBlock)(LocationPointModel *point);
 
@@ -21,6 +28,12 @@
 @property (nonatomic, strong) UITextField *textField;
 @property (nonatomic, strong) UIButton *cancelBtn;
 @property (nonatomic, strong) UITableView *tableView;
+
+@property (nonatomic, strong) BMKLocationManager *locationManager;
+@property (nonatomic, strong) NSMutableArray* geoInfoList;
+@property (nonatomic, strong) NSMutableArray* poiInfoList;
+@property (nonatomic, strong) CLLocation *userLocation;
+@property (nonatomic, strong) BMKGeoCodeSearch *geoCodeSearch;
 
 @end
 
@@ -32,6 +45,27 @@
     self.fd_prefersNavigationBarHidden = YES;
     self.view.backgroundColor = UIColor.whiteColor;
     [self setupUI];
+    
+    [self.locationManager startUpdatingLocation];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    if (_geoCodeSearch) {
+        _geoCodeSearch.delegate = self;
+    }
+    
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    if (_geoCodeSearch) {
+        _geoCodeSearch.delegate = nil;
+    }
 }
 
 - (void)setupUI
@@ -73,6 +107,56 @@
 - (void)onCancel
 {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)poiSearchqueryData
+{
+    
+    [[BaiduMapAuthManager sharedInstance] start:^(BOOL result, NSString *errorMessage) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (result) {
+                
+                BMKGeoCodeSearchOption *option = [[BMKGeoCodeSearchOption alloc] init];
+                
+                option.address = self.textField.text;
+                
+                [self.geoCodeSearch geoCode:option];
+            }
+        });
+    }];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    
+    [self.poiInfoList removeAllObjects];
+    self.poiInfoList = nil;
+    
+    [self poiSearchqueryData];
+    
+    return YES;
+}
+
+- (void)BMKLocationManager:(BMKLocationManager * _Nonnull)manager didFailWithError:(NSError * _Nullable)error
+{
+    
+}
+
+- (void)BMKLocationManager:(BMKLocationManager * _Nonnull)manager
+         didUpdateLocation:(BMKLocation * _Nullable)location
+                   orError:(NSError * _Nullable)error
+{
+    [self.locationManager stopUpdatingLocation];
+    
+    self.userLocation = location.location;
+}
+
+- (void)onGetGeoCodeResult:(BMKGeoCodeSearch *)searcher
+                    result:(BMKGeoCodeSearchResult *)result
+                 errorCode:(BMKSearchErrorCode)error
+{
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -148,6 +232,23 @@
     return _tableView;
 }
 
+- (BMKLocationManager *)locationManager
+{
+    if (_locationManager == nil) {
+        _locationManager = [[BMKLocationManager alloc] init];
+        _locationManager.delegate = self;
+    }
+    return _locationManager;
+}
+
+- (BMKGeoCodeSearch *)geoCodeSearch
+{
+    if (!_geoCodeSearch) {
+        _geoCodeSearch = [BMKGeoCodeSearch new];
+        _geoCodeSearch.delegate = self;
+    }
+    return _geoCodeSearch;
+}
 
 
 @end
