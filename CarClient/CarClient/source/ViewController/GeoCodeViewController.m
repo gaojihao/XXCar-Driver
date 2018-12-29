@@ -23,8 +23,6 @@
 
 @interface GeoCodeViewController ()<UITextFieldDelegate,UITableViewDelegate,UITableViewDataSource,BMKLocationManagerDelegate,BMKPoiSearchDelegate>
 
-@property (nonatomic, copy) void(^completionBlock)(LocationPointModel *point);
-
 @property (nonatomic, strong) LocationPointModel *location;
 @property (nonatomic, strong) UIView *barView;
 @property (nonatomic, strong) UITextField *textField;
@@ -35,6 +33,7 @@
 @property (nonatomic, strong) NSMutableArray <BMKPoiInfo *>* poiInfoList;
 @property (nonatomic, strong) CLLocation *userLocation;
 @property (nonatomic, strong) BMKPoiSearch *poisearch;
+@property (nonatomic, strong) BMKPoiInfo *selectPoi;
 
 @end
 
@@ -108,6 +107,14 @@
 - (void)onCancel
 {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)goBack
+{
+    [self.navigationController popViewControllerAnimated:NO];
+    
+    self.location.coordinate2D = self.selectPoi.pt;
+    self.location.address = self.selectPoi.address;
 }
 
 - (void)poiSearchqueryData
@@ -188,6 +195,12 @@
     cell.model = model;
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.selectPoi = [self.poiInfoList objectAtIndex:indexPath.row];
+    [self goBack];
 }
 
 - (UIView *)barView

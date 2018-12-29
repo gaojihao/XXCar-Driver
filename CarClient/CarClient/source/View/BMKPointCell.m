@@ -45,7 +45,7 @@
     [self.poiIcon mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.contentView.mas_centerY);
         make.left.equalTo(self.contentView.mas_left).with.offset(15);
-        make.size.mas_equalTo(CGSizeMake(15, 15));
+        make.size.mas_equalTo(CGSizeMake(20, 20));
     }];
     
     
@@ -60,7 +60,7 @@
     }];
     
     [self.addressLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.distanceLabel.mas_right).with.offset(4);
+        make.left.equalTo(self.poiIcon.mas_right).with.offset(10);
         make.right.equalTo(self.contentView.mas_right).offset(-2);
         make.top.equalTo(self.contentView.mas_centerY).offset(4);
     }];
@@ -116,7 +116,7 @@
 {
     if (!_poiIcon)
     {
-        _poiIcon = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"FFPangu/choice"]];
+        _poiIcon = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"poi"]];
         [self.contentView addSubview:_poiIcon];
     }
     return _poiIcon;

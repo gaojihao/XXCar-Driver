@@ -41,6 +41,23 @@ const CGFloat LZ_TextFieldHeight = 44.0f;
 {
     RAC(self.startField, text) = RACObserve(self.startLocation, address);
     RAC(self.endField, text) = RACObserve(self.endLocation, address);
+    
+    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    [dic setObject:self.startLocation forKey:@"startLocation"];
+    [dic setObject:self.endLocation forKey:@"endLocation"];
+    
+    
+    [[[RACSignal combineLatest:@[RACObserve(self.startLocation, address),RACObserve(self.endLocation, address)]] map:^id(RACTuple *value) {
+        return @(value.first&&value.last);
+    }] subscribeNext:^(NSNumber *x) {
+        if (x.boolValue) {
+            [[UrlSchemeManager sharedInstance] pushViewControllerWithControllerName:@"GuideViewController"
+                                                                          navigator:[delegate navigation]
+                                                                             params:dic];
+        }
+    }];
 }
 
 - (void)willMoveToSuperview:(UIView *)newSuperview
@@ -83,28 +100,17 @@ const CGFloat LZ_TextFieldHeight = 44.0f;
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-    void(^completionBlock)(LocationPointModel *) = nil;
     
     if (textField == self.startField) {
         
-        completionBlock = ^(LocationPointModel *point){
-        };
         [dic setObject:self.startLocation forKey:@"location"];
         
     } else if (textField == self.endField){
         
-        completionBlock = ^(LocationPointModel *point){
-            
-        };
-        [dic setObject:completionBlock forKey:@"completionBlock"];
         [dic setObject:self.endLocation forKey:@"location"];
     }
     
     AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    
-    
-    [dic setObject:completionBlock forKey:@"completionBlock"];
-    
     
     [[UrlSchemeManager sharedInstance] pushViewControllerWithControllerName:@"GeoCodeViewController"
                                                                   navigator:[delegate navigation]

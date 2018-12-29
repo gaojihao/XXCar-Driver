@@ -272,10 +272,6 @@
         _mapView.mapType = BMKMapTypeStandard;
         _mapView.zoomLevel = 20;
         
-        BMKLocationViewDisplayParam *param = [[BMKLocationViewDisplayParam alloc] init];
-        param.isAccuracyCircleShow = NO;
-        [_mapView updateLocationViewWithParam:param];
-        
         [self.view addSubview:_mapView];
     }
     return _mapView;
