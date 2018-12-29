@@ -19,6 +19,7 @@
 #import "UIColor+Extension.h"
 #import "BaiduMapAuthManager.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import "BMKPointCell.h"
 
 @interface GeoCodeViewController ()<UITextFieldDelegate,UITableViewDelegate,UITableViewDataSource,BMKLocationManagerDelegate,BMKPoiSearchDelegate>
 
@@ -181,7 +182,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [UITableViewCell new];
+    BMKPointCell *cell = [BMKPointCell cellWithTableView:tableView];
+    
+    BMKPoiInfo *model = [self.poiInfoList objectAtIndex:indexPath.row];
+    cell.model = model;
+    
+    return cell;
 }
 
 - (UIView *)barView
@@ -237,7 +243,7 @@
         _tableView.separatorColor = [UIColor lz_colorWithHex:0xececec];
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        _tableView.rowHeight = 44.0f;
+        _tableView.rowHeight = 64.0f;
         _tableView.showsHorizontalScrollIndicator = NO;
         _tableView.showsVerticalScrollIndicator = NO;
         _tableView.tableFooterView = [UIView new];
