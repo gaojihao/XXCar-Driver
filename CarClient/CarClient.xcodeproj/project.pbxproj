@@ -21,7 +21,7 @@
 		93D0E2A721CA848800B4784F /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D0E2A621CA848800B4784F /* Account.m */; };
 		93D0E2AA21CA849800B4784F /* AccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D0E2A921CA849800B4784F /* AccountManager.m */; };
 		93D0E2AD21CA855600B4784F /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D0E2AC21CA855600B4784F /* AboutViewController.m */; };
-		93EF819321D1234B00E18C3A /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EF819221D1234B00E18C3A /* GuideViewController.m */; };
+		93EF819321D1234B00E18C3A /* GuideViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 93EF819221D1234B00E18C3A /* GuideViewController.mm */; };
 		93EF819621D123CE00E18C3A /* GeoCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EF819521D123CE00E18C3A /* GeoCodeViewController.m */; };
 		93FFA8B021D7A49E00B44BBC /* BMKPointCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FFA8AF21D7A49E00B44BBC /* BMKPointCell.m */; };
 		F6702AB121C7C145006950CA /* BMKLocationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6702AB021C7C145006950CA /* BMKLocationKit.framework */; };
@@ -59,7 +59,7 @@
 		93D0E2AB21CA855600B4784F /* AboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		93D0E2AC21CA855600B4784F /* AboutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		93EF819121D1234B00E18C3A /* GuideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
-		93EF819221D1234B00E18C3A /* GuideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuideViewController.m; sourceTree = "<group>"; };
+		93EF819221D1234B00E18C3A /* GuideViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GuideViewController.mm; sourceTree = "<group>"; };
 		93EF819421D123CE00E18C3A /* GeoCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeoCodeViewController.h; sourceTree = "<group>"; };
 		93EF819521D123CE00E18C3A /* GeoCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeoCodeViewController.m; sourceTree = "<group>"; };
 		93FFA8AE21D7A49E00B44BBC /* BMKPointCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMKPointCell.h; sourceTree = "<group>"; };
@@ -136,7 +136,7 @@
 				93D0E2AB21CA855600B4784F /* AboutViewController.h */,
 				93D0E2AC21CA855600B4784F /* AboutViewController.m */,
 				93EF819121D1234B00E18C3A /* GuideViewController.h */,
-				93EF819221D1234B00E18C3A /* GuideViewController.m */,
+				93EF819221D1234B00E18C3A /* GuideViewController.mm */,
 				93EF819421D123CE00E18C3A /* GeoCodeViewController.h */,
 				93EF819521D123CE00E18C3A /* GeoCodeViewController.m */,
 			);
@@ -327,7 +327,7 @@
 			files = (
 				F674C18B21C0FE580090ECD6 /* main.m in Sources */,
 				930353B021CE7B1C00DD5BDF /* WeakProxy.m in Sources */,
-				93EF819321D1234B00E18C3A /* GuideViewController.m in Sources */,
+				93EF819321D1234B00E18C3A /* GuideViewController.mm in Sources */,
 				930353A921CE6B6500DD5BDF /* StartEndPointView.m in Sources */,
 				93D0E2A721CA848800B4784F /* Account.m in Sources */,
 				93D0E2A121CA83F100B4784F /* SideView.m in Sources */,
